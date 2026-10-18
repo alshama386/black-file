@@ -24,6 +24,14 @@
 .case-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:21px 0 10px}.case-heading h3{font-size:19px;margin:0}.case-heading small{color:#858078;font-size:11px}
 .case-heading.suspect-heading{margin-top:27px}.suspect-copy strong,.suspect-copy small,.suspect-copy q{display:block}.suspect-copy q{font-size:11px;color:#6e726e;font-weight:500;margin-top:2px;quotes:"«" "»"}.clue-detail:not(.hidden){background:#e9f0e9;border:1px solid #b8c8b9;padding:19px;border-radius:6px;margin:0 0 17px}.clue-detail h4{margin:5px 0;font-size:15px}.clue-detail p{font-size:13px;margin:0;color:#4b5c50}.archive-row-copy strong{font-size:15px;display:block}.archive-row-copy span{font-size:11px;color:#8a857b}.archive-go{background:transparent;border:0;padding:8px}.card-go{border:1px solid #ddd0c0;background:transparent;color:var(--red);border-radius:4px;min-width:36px;height:36px;font-size:18px}.card-go:hover{background:#f3e6dd}.intro-challenge .button{margin:15px auto}
 
+
+/* BLACK FILE account and global scoreboard -- added without changing the original game styles. */
+.account-top{border:1px solid #d5c2a5;background:#fffaf2;border-radius:5px;color:#34332e;padding:10px 12px;font-weight:900;font-size:11px;white-space:nowrap;max-width:134px;overflow:hidden;text-overflow:ellipsis}
+.auth-modal{max-width:480px}.auth-tabs{display:flex;gap:7px;margin:15px 0}.auth-tabs button,.leaderboard-tabs button{flex:1;border:1px solid #ddd5c9;background:#f6f0e7;border-radius:5px;padding:9px 6px;font-size:12px;font-weight:800;color:#59594f}.auth-tabs button.active,.leaderboard-tabs button.active{background:#232c31;color:#fff;border-color:#232c31}
+.auth-label{display:flex;flex-direction:column;font-size:12px;font-weight:800;gap:5px;margin:10px 0}.auth-label input{background:white;border:1px solid #ded6c9;border-radius:6px;min-height:44px;padding:8px 13px;width:100%;font-weight:600;font-size:13px}.auth-label input:focus{border-color:var(--gold)}.auth-text-button{display:block;margin:12px auto;background:none;border:0;color:#a34449;text-decoration:underline;font-weight:800;font-size:11px}.auth-feedback{min-height:22px;color:#aa3840!important;font-weight:700}.auth-feedback.ok{color:#306f55!important}.auth-identity{display:flex;gap:13px;align-items:center;background:#f3ede2;padding:15px;border-radius:7px;margin:16px 0}.auth-identity .auth-avatar{width:55px;height:55px;display:grid;place-items:center;border-radius:9px;background:#dccbb0;font-size:30px}.auth-identity b{display:block;font-size:19px}.auth-identity small{display:block;color:#776b5e;font-size:11px;line-height:1.9}.auth-signout{background:none;border:1px solid #c6b7a1;border-radius:5px;padding:10px;width:100%;margin-top:14px;color:#98464a;font-weight:800}
+.leaderboard-panel{background:#fffefa;border:1px solid var(--line);border-radius:9px;padding:20px 23px;margin:20px 0 25px}.leaderboard-header{display:flex;align-items:center;justify-content:space-between;gap:9px}.leaderboard-header h2{margin:0;font-size:19px;font-weight:900}.leaderboard-header p{margin:2px 0 0;font-size:11px;color:#777}.board-refresh{white-space:nowrap;border:1px solid #ddd1c0;background:white;border-radius:6px;padding:8px;font-size:11px;font-weight:900;color:#875638}.leaderboard-tabs{display:flex;gap:7px;margin:17px 0}.leaderboard-list{font-size:13px;color:#746d63;min-height:44px}.leaderboard-row{display:grid;grid-template-columns:40px 1fr auto;align-items:center;gap:10px;padding:10px 11px;border-top:1px solid #eee7dd}.leaderboard-row.me{background:#f6eddf}.leaderboard-rank{color:#a44248;font-weight:900;font-family:monospace}.leaderboard-user{display:flex;flex-direction:column;min-width:0}.leaderboard-user b{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.leaderboard-user small{font-size:10px;color:#938b7e}.leaderboard-score{font-family:monospace;font-weight:900;font-size:14px;color:#343c35}
+@media(max-width:700px){.account-top{padding:9px 7px;max-width:88px;font-size:10px}.header-actions{gap:5px}.header-actions .premium-top{padding:9px 7px}.leaderboard-panel{padding:17px 12px}.leaderboard-header h2{font-size:17px}.leaderboard-tabs{gap:4px}.leaderboard-tabs button{font-size:10px}}
+@media(max-width:380px){.account-top{max-width:71px}.brand-type strong{font-size:14px}.header-actions .premium-top{padding:9px 5px}}
   </style>
   <title>الملف الأسود · BLACK FILE</title>
 </head>
@@ -43,7 +51,7 @@
         </nav>
         <div class="header-actions">
           <button id="languageBtn" class="lang-btn" aria-label="Switch language">EN</button>
-          <button id="premiumBtn" class="premium-top"><span aria-hidden="true">✦</span><span data-i18n="premium">العضوية</span></button>
+          <button id="accountBtn" class="account-top" type="button">👤 <span id="accountTopText">دخول</span></button><button id="premiumBtn" class="premium-top"><span aria-hidden="true">✦</span><span data-i18n="premium">العضوية</span></button>
         </div>
       </div>
     </header>
@@ -115,6 +123,11 @@
       <section id="statsView" class="view hidden" aria-labelledby="statsTitle">
         <div class="page-header"><div><span class="section-eyebrow">YOUR DETECTIVE RECORD</span><h1 id="statsTitle" data-i18n="statsTitle">سجل المحقق</h1><p data-i18n="statsDesc">شوف تقدمك، حافظ على سلسلة أيامك، وشارك نتائجك.</p></div><span class="archive-seal">◈</span></div>
         <div class="stats-grid"><div class="stat-card"><div class="stat-icon">◎</div><b id="statPlayed">0</b><span data-i18n="statPlayed">ألعاب مكتملة</span></div><div class="stat-card"><div class="stat-icon">♨</div><b id="statStreak">0</b><span data-i18n="statStreak">سلسلة أيام</span></div><div class="stat-card"><div class="stat-icon">✦</div><b id="statPerfect">0</b><span data-i18n="statPerfect">أيام كاملة</span></div><div class="stat-card"><div class="stat-icon">◆</div><b id="statPoints">0</b><span data-i18n="statPoints">مجموع النقاط</span></div></div>
+        <section class="leaderboard-panel" aria-labelledby="leaderboardTitle">
+          <div class="leaderboard-header"><div><span class="section-eyebrow">DETECTIVE LEADERBOARD</span><h2 id="leaderboardTitle">🏆 ترتيب المحققين</h2><p id="leaderboardCaption">النقاط المحفوظة للحسابات المسجلة</p></div><button id="refreshBoard" type="button" class="board-refresh">↻ تحديث</button></div>
+          <div class="leaderboard-tabs" role="group" aria-label="فترة الترتيب"><button type="button" data-period="today" class="active">اليوم</button><button type="button" data-period="week">الأسبوع</button><button type="button" data-period="month">الشهر</button><button type="button" data-period="all">الكل</button></div>
+          <div id="leaderboardList" class="leaderboard-list" aria-live="polite">سجّل دخولك لعرض ترتيب المحققين.</div>
+        </section>
         <div class="stats-bottom"><div class="stats-record"><h3 data-i18n="dailyReport">تقرير اليوم</h3><div id="recordLines"></div><button id="shareBtn" class="button button-primary"><span data-i18n="shareResult">شارك نتيجتك</span> ↗</button></div><div class="stats-info"><span class="tiny-glyph">⌁</span><h3 data-i18n="privacyHeading">ملفك محفوظ عندك.</h3><p data-i18n="privacyNote">هذه النسخة التجريبية تحفظ نتائجك على نفس الجهاز فقط. الحسابات والمزامنة بين الأجهزة تنضاف عند ربط قاعدة البيانات.</p></div></div>
       </section>
 
@@ -130,6 +143,30 @@
     <nav class="mobile-nav" aria-label="القائمة السريعة"><button data-view="home"><span>⌂</span><small data-i18n="navHome">الرئيسية</small></button><button data-view="games"><span>▦</span><small data-i18n="navGames">ألعاب اليوم</small></button><button data-view="archive"><span>▤</span><small data-i18n="navArchive">الأرشيف</small></button><button data-view="stats"><span>◈</span><small data-i18n="navStats">إنجازاتي</small></button></nav>
   </div>
 
+  <div id="authModal" class="modal-backdrop hidden" role="presentation">
+    <section class="modal auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button class="modal-close" id="authClose" type="button" aria-label="إغلاق">×</button>
+      <span class="section-eyebrow">BLACK FILE ID</span>
+      <h2 id="authTitle">👤 حساب المحقق</h2>
+      <p id="authIntro">سو حساب مجاني عشان تنحفظ نقاطك حتى لو غيّرت جهازك.</p>
+      <div id="authGuest">
+        <div class="auth-tabs" role="group" aria-label="نوع الدخول"><button id="authLoginTab" type="button" class="active">تسجيل الدخول</button><button id="authSignupTab" type="button">حساب جديد</button></div>
+        <form id="authForm" autocomplete="on">
+          <label id="authNameWrap" class="auth-label hidden"><span>اسم المحقق</span><input id="authName" name="name" maxlength="32" autocomplete="nickname" placeholder="مثلاً: المحقق صالح" /></label>
+          <label class="auth-label"><span id="authEmailLabel">البريد الإلكتروني</span><input id="authEmail" type="email" name="email" required autocomplete="email" dir="ltr" placeholder="name@example.com" /></label>
+          <label class="auth-label"><span id="authPasswordLabel">كلمة المرور</span><input id="authPassword" type="password" name="password" required minlength="6" autocomplete="current-password" dir="ltr" placeholder="6 أحرف أو أكثر" /></label>
+          <button type="submit" id="authSubmit" class="button button-primary button-full">تسجيل الدخول</button>
+        </form>
+        <button id="authReset" class="auth-text-button" type="button">نسيت كلمة المرور؟</button>
+      </div>
+      <div id="authLogged" class="hidden">
+        <div class="auth-identity"><div class="auth-avatar">🕵️</div><div><b id="accountName">—</b><small id="accountMember">العضوية: —</small><small id="accountEmail" dir="ltr"></small><small id="accountVip">العضوية المجانية</small></div></div>
+        <form id="profileForm"><label class="auth-label"><span id="profileNameLabel">اسمك الظاهر في ترتيب المحققين</span><input id="profileNameInput" maxlength="32" minlength="1" required /></label><button id="profileSave" type="submit" class="button button-primary button-full">💾 حفظ الاسم</button></form>
+        <button id="signOutBtn" type="button" class="auth-signout">تسجيل الخروج</button>
+      </div>
+      <p class="auth-feedback" id="authFeedback" role="status" aria-live="polite"></p>
+    </section>
+  </div>
   <div id="premiumModal" class="modal-backdrop hidden" role="presentation">
     <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="closeModal" aria-label="إغلاق">×</button><span class="modal-crown">✦</span><span class="section-eyebrow">BLACK FILE CLUB</span><h2 id="modalTitle" data-i18n="modalTitle">خلك أول من يفتح الأرشيف.</h2><p data-i18n="modalDesc">الاشتراكات الحقيقية قيد التجهيز. هذي معاينة للباقات، وماكو سحب فلوس أو دفع في النسخة الحالية.</p><div class="plan-list"><div class="plan"><div><b data-i18n="planMonthly">شهري</b><small data-i18n="planMonthlyDesc">الأرشيف + ملفات أسبوعية إضافية</small></div><div class="plan-price">1.990 <span data-i18n="kwd">د.ك</span></div></div><div class="plan plan-popular"><div><b data-i18n="planYearly">سنوي</b><small data-i18n="planYearlyDesc">كل المزايا + سعر أوفر</small></div><div class="plan-price">14.900 <span data-i18n="kwd">د.ك</span></div></div></div><button id="premiumConfirm" class="button button-primary button-full" data-i18n="previewOnly">تمام، فهمت — قريباً</button><p class="disclaimer" data-i18n="noPayments">تنويه: الدفع والتسجيل غير مفعّلين بعد، ولا يتم جمع أي بيانات مالية.</p></section>
   </div>
@@ -140,7 +177,7 @@ window.BLACKFILE_DATA = {
   translations: {
     ar: {
       brand:'الملف الأسود', navHome:'الرئيسية',navGames:'ألعاب اليوم',navArchive:'الأرشيف',navStats:'إنجازاتي',premium:'العضوية',dailyEdition:'الإصدار اليومي',
-      heroOverline:'الملف رقم ٠٠١ • التحقيق اليومي',heroLine1:'في كل يوم',heroLine2:'سرّ جديد.',heroDesc:'أربع تحديات تفتح كل يوم. اجمع الأدلة، اكسر الشفرات، واكتشف الحقيقة قبل الآخرين.',startCase:'افتح ملف اليوم',browseGames:'اكتشف الألعاب',gamesToday:'تحديات يومية',minutes:'دقائق',caseTime:'لتفتح الحقيقة',freeDaily:'لعب يومي مجاني',dailyCollection:'YOUR DAILY DOSE OF MYSTERY',todaysChallenges:'تحديات اليوم ✦',dailyHint:'كل يوم مجموعة جديدة. تقدر تلعب مجاناً وترجع باچر.',viewAll:'عرض الكل',promoTitle:'بعض الملفات ما تنفتح للكل.',promoText:'أرشيف القضايا، ملفات إضافية، وتحليلاتك التفصيلية — مع العضوية القادمة.',clubExplore:'اكتشف العضوية',playTitle:'ملفات اليوم',playSubtitle:'الأربع ألعاب تتجدد كل يوم عند منتصف الليل بتوقيت الكويت.',dailyProgress:'إنجازك اليوم',archiveTitle:'أرشيف الملفات',archiveDesc:'القضايا اللي راحت ما اختفت. كلها تنتظرك مع عضوية الملف الأسود.',archivePromoTitle:'افتح كل الأبواب',archivePromoDesc:'شوف القضايا السابقة والملفات الإضافية من مكان واحد. الأرشيف حالياً عرض تجريبي إلى أن نفعّل الاشتراكات.',memberPlans:'باقات العضوية',statsTitle:'سجل المحقق',statsDesc:'شوف تقدمك، حافظ على سلسلة أيامك، وشارك نتائجك.',statPlayed:'ألعاب مكتملة',statStreak:'سلسلة أيام',statPerfect:'أيام كاملة',statPoints:'مجموع النقاط',dailyReport:'تقرير اليوم',shareResult:'شارك نتيجتك',privacyHeading:'ملفك محفوظ عندك.',privacyNote:'هذه النسخة التجريبية تحفظ نتائجك على نفس الجهاز فقط. الحسابات والمزامنة بين الأجهزة تنضاف عند ربط قاعدة البيانات.',backToGames:'رجوع لألعاب اليوم',footerTag:'الحقيقة تلعب معك.',prototype:'نسخة أولية تجريبية',modalTitle:'خلك أول من يفتح الأرشيف.',modalDesc:'الاشتراكات الحقيقية قيد التجهيز. هذي معاينة للباقات، وماكو سحب فلوس أو دفع في النسخة الحالية.',planMonthly:'شهري',planMonthlyDesc:'الأرشيف + ملفات أسبوعية إضافية',planYearly:'سنوي',planYearlyDesc:'كل المزايا + سعر أوفر',kwd:'د.ك',previewOnly:'تمام، فهمت — قريباً',noPayments:'تنويه: الدفع والتسجيل غير مفعّلين بعد، ولا يتم جمع أي بيانات مالية.',
+      heroOverline:'الملف رقم ٠٠١ • التحقيق اليومي',heroLine1:'في كل يوم',heroLine2:'سرّ جديد.',heroDesc:'أربع تحديات تفتح كل يوم. اجمع الأدلة، اكسر الشفرات، واكتشف الحقيقة قبل الآخرين.',startCase:'افتح ملف اليوم',browseGames:'اكتشف الألعاب',gamesToday:'تحديات يومية',minutes:'دقائق',caseTime:'لتفتح الحقيقة',freeDaily:'لعب يومي مجاني',dailyCollection:'YOUR DAILY DOSE OF MYSTERY',todaysChallenges:'تحديات اليوم ✦',dailyHint:'كل يوم مجموعة جديدة. تقدر تلعب مجاناً وترجع باچر.',viewAll:'عرض الكل',promoTitle:'بعض الملفات ما تنفتح للكل.',promoText:'أرشيف القضايا، ملفات إضافية، وتحليلاتك التفصيلية — مع العضوية القادمة.',clubExplore:'اكتشف العضوية',playTitle:'ملفات اليوم',playSubtitle:'الأربع ألعاب تتجدد كل يوم عند منتصف الليل بتوقيت الكويت.',dailyProgress:'إنجازك اليوم',archiveTitle:'أرشيف الملفات',archiveDesc:'القضايا اللي راحت ما اختفت. كلها تنتظرك مع عضوية الملف الأسود.',archivePromoTitle:'افتح كل الأبواب',archivePromoDesc:'شوف القضايا السابقة والملفات الإضافية من مكان واحد. الأرشيف حالياً عرض تجريبي إلى أن نفعّل الاشتراكات.',memberPlans:'باقات العضوية',statsTitle:'سجل المحقق',statsDesc:'شوف تقدمك، حافظ على سلسلة أيامك، وشارك نتائجك.',statPlayed:'ألعاب مكتملة',statStreak:'سلسلة أيام',statPerfect:'أيام كاملة',statPoints:'مجموع النقاط',dailyReport:'تقرير اليوم',shareResult:'شارك نتيجتك',privacyHeading:'ملفك يتنقل معاك.',privacyNote:'سجّل دخولك علشان تنحفظ نتائج ألعابك الجديدة في Supabase وتظهر على أجهزتك. بدون حساب، تنحفظ النتيجة على جهازك فقط. النتائج القديمة للضيف ما تنتقل تلقائياً للحساب.',backToGames:'رجوع لألعاب اليوم',footerTag:'الحقيقة تلعب معك.',prototype:'نسخة أولية تجريبية',modalTitle:'خلك أول من يفتح الأرشيف.',modalDesc:'الاشتراكات الحقيقية قيد التجهيز. هذي معاينة للباقات، وماكو سحب فلوس أو دفع في النسخة الحالية.',planMonthly:'شهري',planMonthlyDesc:'الأرشيف + ملفات أسبوعية إضافية',planYearly:'سنوي',planYearlyDesc:'كل المزايا + سعر أوفر',kwd:'د.ك',previewOnly:'تمام، فهمت — قريباً',noPayments:'تنويه: تسجيل الحسابات متاح، لكن الدفع والاشتراكات المدفوعة غير مفعّلين، ولا نجمع بيانات مالية.',
       openFile:'ابدأ التحقيق',openGame:'ابدأ التحدي',done:'مكتمل',new:'جديد',point:'نقطة',points:'نقطة',playAgainTomorrow:'أحسنت! تحدي جديد ينفتح باچر.',locked:'للأعضاء',viewPlan:'اعرف أكثر',archiveDate:'ملف سابق',archiveNotice:'الأرشيف مغلق في النسخة التجريبية لحين تفعيل العضويات.',
       caseName:'قضية اليوم',caseTag:'INVESTIGATION',caseCardDesc:'اقرأ الأدلة، استجوب المشتبه فيهم، وحدّد الفاعل.',codeName:'الشفرة',codeTag:'CODE BREAKER',codeCardDesc:'فك رمز الخزنة المكوّن من أربعة أرقام في ست محاولات.',memoryName:'ذاكرة الشاهد',memoryTag:'MEMORY TEST',memoryCardDesc:'احفظ المشهد جيداً وأجب عن ثلاث أسئلة.',timelineName:'خطّ الزمن',timelineTag:'TIMELINE',timelineCardDesc:'رتّب الأحداث بالترتيب الصحيح واكشف التسلسل.',
       caseBrief:'ملخص البلاغ',evidenceTitle:'الأدلة المجمّعة',evidenceHint:'اضغط على الأدلة لقراءة تفاصيلها. افتح دليلين على الأقل قبل إصدار الحكم.',suspectTitle:'المشتبه فيهم',suspectHint:'اقرأ إفاداتهم واختَر الشخص المسؤول.',verdict:'أصدر الحكم',pickSuspect:'اختَر مشتبهاً فيه أولاً.',needEvidence:'افتح دليلين على الأقل قبل الحكم.',resolution:'نتيجة التحقيق',right:'تحقيق ناجح!',wrong:'الحقيقة كانت مختلفة',resultCorrect:'أحسنت! وصلت للفاعل.',resultWrong:'مو هذا الفاعل، شوف شلون كانت الحقيقة.',tryOther:'العب تحدياً ثاني',evidenceSeen:'أدلة فُحصت',
@@ -151,7 +188,7 @@ window.BLACKFILE_DATA = {
       memoryThird:'شنو كان الرمز الثالث؟',memoryLast:'شنو كان آخر رمز؟',memoryAbsent:'أي رمز ما ظهر بالمشهد؟',gameFinished:'انتهى التحدّي!',fromMax:'من',comeTomorrow:'تعال باچر لتحديات جديدة.',
     },
     en: {
-      brand:'Black File',navHome:'Home',navGames:'Today’s games',navArchive:'Archive',navStats:'My stats',premium:'Membership',dailyEdition:'Daily edition',heroOverline:'FILE NO. 001 • DAILY INVESTIGATION',heroLine1:'Every day,',heroLine2:'a new mystery.',heroDesc:'Four challenges unlock every day. Examine clues, crack the code, and uncover the truth.',startCase:'Open today’s file',browseGames:'Explore games',gamesToday:'daily challenges',minutes:'min',caseTime:'to crack the case',freeDaily:'free daily play',dailyCollection:'YOUR DAILY DOSE OF MYSTERY',todaysChallenges:'Today’s challenges ✦',dailyHint:'A fresh set every day. Play free and return tomorrow.',viewAll:'View all',promoTitle:'Some files aren’t for everyone.',promoText:'Past cases, bonus files, and detailed insights — in our upcoming membership.',clubExplore:'Explore membership',playTitle:'Today’s files',playSubtitle:'Four games refresh daily at midnight, Kuwait time.',dailyProgress:'Today’s progress',archiveTitle:'Case archive',archiveDesc:'Past mysteries are waiting in our membership archive.',archivePromoTitle:'Unlock every door',archivePromoDesc:'Explore previous cases and bonus files. The archive is a preview until payments are enabled.',memberPlans:'View plans',statsTitle:'Detective record',statsDesc:'Track progress, keep your streak, and share your results.',statPlayed:'games completed',statStreak:'day streak',statPerfect:'perfect days',statPoints:'total points',dailyReport:'Today’s report',shareResult:'Share my results',privacyHeading:'Your file stays with you.',privacyNote:'This preview saves progress on this device only. Accounts and cross-device sync will be added with our backend.',backToGames:'Back to today’s games',footerTag:'The truth is the game.',prototype:'Preview build',modalTitle:'Be first to unlock the archive.',modalDesc:'Paid membership is not live yet. This is a pricing preview only. No payment or charges are available.',planMonthly:'Monthly',planMonthlyDesc:'Archive + weekly bonus files',planYearly:'Yearly',planYearlyDesc:'Every feature + better value',kwd:'KWD',previewOnly:'Got it — coming soon',noPayments:'Payments and accounts are not enabled; no financial information is collected.',openFile:'Investigate now',openGame:'Play challenge',done:'Completed',new:'New',point:'point',points:'points',playAgainTomorrow:'Well done! A new challenge unlocks tomorrow.',locked:'Members only',viewPlan:'Learn more',archiveDate:'Previous case',archiveNotice:'The archive is locked in this preview until memberships launch.',caseName:'Daily case',caseTag:'INVESTIGATION',caseCardDesc:'Inspect evidence, interview suspects, and name the culprit.',codeName:'The cipher',codeTag:'CODE BREAKER',codeCardDesc:'Crack a four-digit safe code in six guesses.',memoryName:'Witness memory',memoryTag:'MEMORY TEST',memoryCardDesc:'Memorize the scene and answer three questions.',timelineName:'The timeline',timelineTag:'TIMELINE',timelineCardDesc:'Put events in the correct order.',caseBrief:'The case file',evidenceTitle:'Collected evidence',evidenceHint:'Tap clues to read the details. Open at least two clues before your verdict.',suspectTitle:'Suspects',suspectHint:'Review their statements and name the culprit.',verdict:'Submit verdict',pickSuspect:'Select a suspect first.',needEvidence:'Open at least two clues first.',resolution:'Case resolution',right:'Case solved!',wrong:'Not quite right',resultCorrect:'Excellent detective work.',resultWrong:'That was not the culprit. Here’s the truth.',tryOther:'Play another game',evidenceSeen:'Clues inspected',codeInfo:'The code has 4 digits. Correct digit and position appear gold; correct digit in a different spot appears blue.',codeInput:'Enter 4 digits',tryGuess:'Try code',attemptsLeft:'Guesses left',codeWon:'Safe unlocked!',codeLost:'Out of guesses',secretWas:'The correct code was',codeExact:'correct positions',codePartial:'correct, wrong position',invalidCode:'Enter four digits.',memoryReady:'Ready to test your memory?',memoryInstructions:'Six symbols will appear for seven seconds. Memorize their order, then answer three questions.',showScene:'Show the scene',memorize:'Remember these!',memoryQuestion:'Question',nextQuestion:'Next question',finishMemory:'See my result',yourScore:'Your score',memoryFinished:'Memory test complete',timelineInfo:'These events are shuffled. Move them up or down into the right sequence.',submitOrder:'Check order',timelineWon:'Perfect sequence!',timelineLost:'No guesses left',timelineTryAgain:'Not quite. One more attempt.',correctOrder:'Correct order',alreadyDone:'You completed this game today',alreadyDoneDesc:'Return tomorrow for fresh games. Your result is saved.',noCompleted:'No games completed yet. Start your first challenge!',shareCopied:'Results copied. Share with your friends!',shareFailed:'Could not copy. You can share a screenshot instead.',dayLabel:'day',issueLabel:'Edition',daysAgo:'ago',day:'day',timeKuwait:'Kuwait time',nowPlaying:'In progress',score:'Score',facts:'Fictional cases for entertainment, not real events.',memoryThird:'What was the third symbol?',memoryLast:'What was the last symbol?',memoryAbsent:'Which symbol was NOT in the scene?',gameFinished:'Challenge complete!',fromMax:'out of',comeTomorrow:'Come back tomorrow for new challenges.'
+      brand:'Black File',navHome:'Home',navGames:'Today’s games',navArchive:'Archive',navStats:'My stats',premium:'Membership',dailyEdition:'Daily edition',heroOverline:'FILE NO. 001 • DAILY INVESTIGATION',heroLine1:'Every day,',heroLine2:'a new mystery.',heroDesc:'Four challenges unlock every day. Examine clues, crack the code, and uncover the truth.',startCase:'Open today’s file',browseGames:'Explore games',gamesToday:'daily challenges',minutes:'min',caseTime:'to crack the case',freeDaily:'free daily play',dailyCollection:'YOUR DAILY DOSE OF MYSTERY',todaysChallenges:'Today’s challenges ✦',dailyHint:'A fresh set every day. Play free and return tomorrow.',viewAll:'View all',promoTitle:'Some files aren’t for everyone.',promoText:'Past cases, bonus files, and detailed insights — in our upcoming membership.',clubExplore:'Explore membership',playTitle:'Today’s files',playSubtitle:'Four games refresh daily at midnight, Kuwait time.',dailyProgress:'Today’s progress',archiveTitle:'Case archive',archiveDesc:'Past mysteries are waiting in our membership archive.',archivePromoTitle:'Unlock every door',archivePromoDesc:'Explore previous cases and bonus files. The archive is a preview until payments are enabled.',memberPlans:'View plans',statsTitle:'Detective record',statsDesc:'Track progress, keep your streak, and share your results.',statPlayed:'games completed',statStreak:'day streak',statPerfect:'perfect days',statPoints:'total points',dailyReport:'Today’s report',shareResult:'Share my results',privacyHeading:'Your case file goes with you.',privacyNote:'Sign in to save new scores to Supabase and sync across devices. Guest scores remain on this device and do not automatically transfer to your account.',backToGames:'Back to today’s games',footerTag:'The truth is the game.',prototype:'Preview build',modalTitle:'Be first to unlock the archive.',modalDesc:'Paid membership is not live yet. This is a pricing preview only. No payment or charges are available.',planMonthly:'Monthly',planMonthlyDesc:'Archive + weekly bonus files',planYearly:'Yearly',planYearlyDesc:'Every feature + better value',kwd:'KWD',previewOnly:'Got it — coming soon',noPayments:'Accounts are enabled. Paid subscriptions and payments are not enabled; we do not collect payment details.',openFile:'Investigate now',openGame:'Play challenge',done:'Completed',new:'New',point:'point',points:'points',playAgainTomorrow:'Well done! A new challenge unlocks tomorrow.',locked:'Members only',viewPlan:'Learn more',archiveDate:'Previous case',archiveNotice:'The archive is locked in this preview until memberships launch.',caseName:'Daily case',caseTag:'INVESTIGATION',caseCardDesc:'Inspect evidence, interview suspects, and name the culprit.',codeName:'The cipher',codeTag:'CODE BREAKER',codeCardDesc:'Crack a four-digit safe code in six guesses.',memoryName:'Witness memory',memoryTag:'MEMORY TEST',memoryCardDesc:'Memorize the scene and answer three questions.',timelineName:'The timeline',timelineTag:'TIMELINE',timelineCardDesc:'Put events in the correct order.',caseBrief:'The case file',evidenceTitle:'Collected evidence',evidenceHint:'Tap clues to read the details. Open at least two clues before your verdict.',suspectTitle:'Suspects',suspectHint:'Review their statements and name the culprit.',verdict:'Submit verdict',pickSuspect:'Select a suspect first.',needEvidence:'Open at least two clues first.',resolution:'Case resolution',right:'Case solved!',wrong:'Not quite right',resultCorrect:'Excellent detective work.',resultWrong:'That was not the culprit. Here’s the truth.',tryOther:'Play another game',evidenceSeen:'Clues inspected',codeInfo:'The code has 4 digits. Correct digit and position appear gold; correct digit in a different spot appears blue.',codeInput:'Enter 4 digits',tryGuess:'Try code',attemptsLeft:'Guesses left',codeWon:'Safe unlocked!',codeLost:'Out of guesses',secretWas:'The correct code was',codeExact:'correct positions',codePartial:'correct, wrong position',invalidCode:'Enter four digits.',memoryReady:'Ready to test your memory?',memoryInstructions:'Six symbols will appear for seven seconds. Memorize their order, then answer three questions.',showScene:'Show the scene',memorize:'Remember these!',memoryQuestion:'Question',nextQuestion:'Next question',finishMemory:'See my result',yourScore:'Your score',memoryFinished:'Memory test complete',timelineInfo:'These events are shuffled. Move them up or down into the right sequence.',submitOrder:'Check order',timelineWon:'Perfect sequence!',timelineLost:'No guesses left',timelineTryAgain:'Not quite. One more attempt.',correctOrder:'Correct order',alreadyDone:'You completed this game today',alreadyDoneDesc:'Return tomorrow for fresh games. Your result is saved.',noCompleted:'No games completed yet. Start your first challenge!',shareCopied:'Results copied. Share with your friends!',shareFailed:'Could not copy. You can share a screenshot instead.',dayLabel:'day',issueLabel:'Edition',daysAgo:'ago',day:'day',timeKuwait:'Kuwait time',nowPlaying:'In progress',score:'Score',facts:'Fictional cases for entertainment, not real events.',memoryThird:'What was the third symbol?',memoryLast:'What was the last symbol?',memoryAbsent:'Which symbol was NOT in the scene?',gameFinished:'Challenge complete!',fromMax:'out of',comeTomorrow:'Come back tomorrow for new challenges.'
     }
   },
   games: [
@@ -234,12 +271,26 @@ window.BLACKFILE_DATA = {
 };
 
   </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <script>
-/* BLACK FILE — fully interactive, offline-first preview. No payments or real accounts. */
+/* BLACK FILE — daily games + cloud accounts. Paid memberships are still a preview. */
 (() => {
   'use strict';
   const DATA = window.BLACKFILE_DATA;
   const STORE_KEY = 'blackfile_progress_v1';
+  const SUPABASE_URL = 'https://tcveiqycmajpqzwkadwm.supabase.co';
+  const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_iPszDcwUgHbeCygXgN9AEw_PzmAGRoT';
+  let cloud = null;
+  let activeUser = null;
+  let profile = null;
+  let vip = null;
+  let cloudReady = false;
+  let sessionGeneration = 0;
+  let boardPeriod = 'today';
+  let authMode = 'login';
+  let authWorking = false;
+  const storeName = () => activeUser ? 'blackfile_account_'+activeUser.id+'_v1' : STORE_KEY;
+  const readStore = key => {try {const value=JSON.parse(localStorage.getItem(key));return value&&typeof value==='object'?value:{days:{},lang:'ar'};}catch{return {days:{},lang:'ar'};}};
   const $ = (s, root=document) => root.querySelector(s);
   const $$ = (s, root=document) => [...root.querySelectorAll(s)];
   const html = str => String(str ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -274,13 +325,14 @@ window.BLACKFILE_DATA = {
   const num = n => new Intl.NumberFormat(lang==='ar'?'ar-KW':'en-US').format(n);
   const readLocal = obj => obj[lang];
   const game = id => DATA.games.find(x=>x.id===id);
-  function persist(){ try { localStorage.setItem(STORE_KEY,JSON.stringify(saved)); }catch(e){ console.warn('Local storage unavailable',e); }}
+  function persist(){ try { localStorage.setItem(storeName(),JSON.stringify(saved)); }catch(e){ console.warn('Local storage unavailable',e); }}
   function track(id,result){
     if (outcome(id)) return;
     saved.days[today] = saved.days[today] || {};
     saved.days[today][id] = { score:result.score, success:Boolean(result.success), result:result.result || '', finished:Date.now() };
     persist();
     paintProgress();
+    if(activeUser && cloud && cloudReady) submitCloudPlay(today,id,result);
   }
   function showToast(message){const el=$('#toast'); el.textContent=message; el.classList.add('shown');clearTimeout(showToast.timeout);showToast.timeout=setTimeout(()=>el.classList.remove('shown'),3200);}
   function clearGameTimer(){if(timer){clearInterval(timer);clearTimeout(timer);timer=null;}}
@@ -294,6 +346,9 @@ window.BLACKFILE_DATA = {
     $('#gamesDate').textContent=readableDate();
     $('#footerYear').textContent=new Date().getFullYear();
     document.title=(lang==='ar'?'الملف الأسود':'BLACK FILE')+' · BLACK FILE';
+    paintAccountHeader();
+    updateAuthLabels();
+    updateBoardLabels();
   }
   function card(g){
     const done=outcome(g.id);
@@ -357,7 +412,7 @@ window.BLACKFILE_DATA = {
     if(el)el.classList.remove('hidden');
     $$('.nav-item,.mobile-nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===view));
     if(view==='archive')paintArchive();
-    if(view==='stats')paintStats();
+    if(view==='stats'){paintStats();loadLeaderboard();}
     if(view==='games')paintProgress();
     scrollTo({top:0,behavior:'instant'});
   }
@@ -372,6 +427,7 @@ window.BLACKFILE_DATA = {
   }
   function launch(id){
     if(!game(id))return;
+    if(activeUser && !cloudReady){showToast(lang==='ar'?'جاري تحميل نتائج حسابك، جرّب بعد لحظة.':'Loading your scores. Please wait a moment.');return;}
     currentGame=id;
     go('play');decoratePlay(id);
     if(outcome(id)){renderCompleted(id);return;}
@@ -486,6 +542,214 @@ window.BLACKFILE_DATA = {
       else {showToast(t('timelineTryAgain'));renderTimeline();}
     });
   }
+
+  // Account system: Supabase Auth + database RLS, while keeping guest play available.
+  const accountString = (ar,en) => lang==='ar' ? ar : en;
+  function accountFeedback(message,ok=false){
+    const el=$('#authFeedback');el.textContent=message;el.classList.toggle('ok',ok);
+  }
+  function updateAuthLabels(){
+    const L=(ar,en)=>accountString(ar,en);
+    $('#authTitle').textContent=L('👤 حساب المحقق','👤 Detective account');
+    $('#authIntro').textContent=L('سجّل مجاناً علشان تنحفظ نتائجك على كل أجهزتك.','Sign up free to save your scores across devices.');
+    $('#authLoginTab').textContent=L('تسجيل الدخول','Sign in');
+    $('#authSignupTab').textContent=L('حساب جديد','Create account');
+    $('#authNameWrap span').textContent=L('اسم المحقق','Detective name');
+    $('#authEmailLabel').textContent=L('البريد الإلكتروني','Email address');
+    $('#authPasswordLabel').textContent=L('كلمة المرور','Password');
+    $('#authSubmit').textContent=authMode==='signup'?L('إنشاء حساب مجاني','Create free account'):L('تسجيل الدخول','Sign in');
+    $('#authReset').textContent=L('نسيت كلمة المرور؟','Forgot password?');
+    $('#profileNameLabel').textContent=L('اسمك الظاهر في ترتيب المحققين','Your name on the leaderboard');
+    $('#profileSave').textContent=L('💾 حفظ الاسم','💾 Save name');
+    $('#signOutBtn').textContent=L('تسجيل الخروج','Sign out');
+    $('#authNameWrap').classList.toggle('hidden',authMode!=='signup');
+    $('#authReset').classList.toggle('hidden',authMode==='signup');
+    $('#authPassword').autocomplete=authMode==='signup'?'new-password':'current-password';
+    $('#authLoginTab').classList.toggle('active',authMode==='login');
+    $('#authSignupTab').classList.toggle('active',authMode==='signup');
+  }
+  function paintAccountHeader(){
+    const el=$('#accountTopText');
+    if(!el)return;
+    el.textContent=activeUser ? (profile?.display_name || accountString('حسابي','My account')) : accountString('دخول','Sign in');
+  }
+  function renderAccount(){
+    paintAccountHeader();
+    $('#authGuest').classList.toggle('hidden',Boolean(activeUser));
+    $('#authLogged').classList.toggle('hidden',!activeUser);
+    if(activeUser){
+      $('#accountName').textContent=profile?.display_name || accountString('محقق جديد','New detective');
+      $('#accountMember').textContent=accountString('رقم العضوية: ','Member #')+(profile?.member_number??'…');
+      $('#accountEmail').textContent=activeUser.email||'';
+      const paid=vip && ['active','trialing'].includes(vip.status) && (!vip.period_end || new Date(vip.period_end)>new Date());
+      $('#accountVip').textContent=paid ? 'VIP ✦' : accountString('عضوية مجانية','Free account');
+      if(document.activeElement!==$('#profileNameInput')) $('#profileNameInput').value=profile?.display_name||'';
+    }
+  }
+  function showAccount(){
+    updateAuthLabels();renderAccount();accountFeedback('');
+    $('#authModal').classList.remove('hidden');$('#authClose').focus();
+  }
+  function hideAccount(){$('#authModal').classList.add('hidden');}
+  function updateBoardLabels(){
+    $('#leaderboardTitle').textContent=accountString('🏆 ترتيب المحققين','🏆 Detective leaderboard');
+    $('#leaderboardCaption').textContent=accountString('نقاط الأعضاء المسجلين','Scores from registered accounts');
+    $('#refreshBoard').textContent=accountString('↻ تحديث','↻ Refresh');
+    const labels={today:['اليوم','Today'],week:['الأسبوع','Week'],month:['الشهر','Month'],all:['الكل','All time']};
+    $$('[data-period]').forEach(b=>{b.textContent=labels[b.dataset.period][lang==='ar'?0:1];b.classList.toggle('active',b.dataset.period===boardPeriod);});
+  }
+  async function loadLeaderboard(){
+    if(!cloud){$('#leaderboardList').textContent=accountString('اتصل بالإنترنت لعرض الترتيب.','Connect to the internet to view the leaderboard.');return;}
+    $('#leaderboardList').textContent=accountString('جاري تحميل الترتيب…','Loading leaderboard…');
+    const period=boardPeriod;
+    try{
+      const {data,error}=await cloud.rpc('bf_leaderboard',{p_period:period,p_limit:15});
+      if(period!==boardPeriod)return;
+      if(error)throw error;
+      if(!data?.length){$('#leaderboardList').textContent=accountString('ماكو نتائج بهالفترة للحين. كن أول محقق!','No results for this period yet. Be the first!');return;}
+      $('#leaderboardList').innerHTML=data.map(row=>`<div class="leaderboard-row ${Number(row.member_number)===Number(profile?.member_number)?'me':''}"><strong class="leaderboard-rank">#${num(row.rank)}</strong><div class="leaderboard-user"><b>${html(row.display_name)}</b><small>ID ${html(row.member_number)} · ${num(row.games_played)} ${accountString('لعبة','games')}</small></div><span class="leaderboard-score">${num(row.total_points)} ✦</span></div>`).join('');
+    }catch(err){console.warn('Leaderboard error',err);$('#leaderboardList').textContent=accountString('تعذر تحميل الترتيب حالياً.','Leaderboard unavailable right now.');}
+  }
+  function refreshAllUI(){
+    translateStatic();paintProgress();paintArchive();paintStats();renderAccount();
+    if(currentView==='stats')loadLeaderboard();
+  }
+  async function hydrateMember(user){
+    const generation=++sessionGeneration;
+    activeUser=user||null;profile=null;vip=null;cloudReady=false;
+    // Scores from a guest are deliberately kept separate from personal accounts.
+    saved=activeUser?readStore(storeName()):readStore(STORE_KEY);
+    if(!saved.days||typeof saved.days!=='object') saved.days={};
+    saved.lang=lang;
+    refreshAllUI();
+    if(!activeUser){cloudReady=true;return;}
+    try{
+      const [p,r,m]=await Promise.all([
+        cloud.from('bf_profiles').select('member_number,display_name,avatar').eq('user_id',user.id).maybeSingle(),
+        cloud.from('bf_plays').select('game_date,game_key,score,success,completed_at').eq('user_id',user.id).order('game_date',{ascending:false}).limit(1500),
+        cloud.from('bf_memberships').select('plan,status,period_end').eq('user_id',user.id).maybeSingle()
+      ]);
+      if(generation!==sessionGeneration)return;
+      if(p.error)throw p.error;
+      if(r.error)throw r.error;
+      profile=p.data||null;
+      vip=m.error?null:m.data;
+      // Database is the source of truth for signed-in scores.
+      const days={};
+      (r.data||[]).forEach(v=>{
+        if(!DATA.games.some(g=>g.id===v.game_key))return;
+        const d=days[v.game_date]||(days[v.game_date]={});
+        d[v.game_key]={score:v.score,success:v.success,finished:Date.parse(v.completed_at)||Date.now()};
+      });
+      saved={days,lang};persist();cloudReady=true;refreshAllUI();
+    }catch(err){
+      if(generation!==sessionGeneration)return;
+      console.warn('BLACK FILE cloud data unavailable',err);
+      cloudReady=true; // Let player use local device if server isn't accessible.
+      showToast(accountString('تعذر تحديث نتائجك من السيرفر. بنحفظها مؤقتاً على جهازك.','Cloud unavailable. Scores will stay on this device for now.'));
+      refreshAllUI();
+    }
+  }
+  async function submitCloudPlay(date,id,result){
+    if(!cloud||!activeUser)return;
+    const userId=activeUser.id;
+    try{
+      const {error}=await cloud.from('bf_plays').insert({user_id:userId,game_date:date,game_key:id,score:result.score,success:Boolean(result.success)});
+      if(error){
+        if(error.code==='23505'){
+          showToast(accountString('هاللعبة مسجلة من قبل بحسابك.','You already finished this game today.'));
+          const {data}=await cloud.from('bf_plays').select('game_date,game_key,score,success,completed_at').eq('user_id',userId).eq('game_date',date);
+          if(activeUser?.id===userId&&data){
+            saved.days[date]=Object.fromEntries(data.map(v=>[v.game_key,{score:v.score,success:v.success,finished:Date.parse(v.completed_at)||Date.now()}]));
+            persist();paintProgress();paintStats();
+          }
+        }else{throw error;}
+      }else if(currentView==='stats')loadLeaderboard();
+    }catch(err){console.warn('Unable to save game on Supabase',err);showToast(accountString('النتيجة محفوظة بالجهاز، لكن تعذّر رفعها للحساب.','Saved locally, but cloud sync failed.'));}
+  }
+  async function initCloud(){
+    if(!window.supabase?.createClient){
+      showToast(accountString('خدمة الحسابات غير متاحة حالياً. الألعاب شغالة كضيف.','Accounts unavailable right now; guest games still work.'));
+      return;
+    }
+    try{
+      cloud=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
+      cloud.auth.onAuthStateChange((_event,session)=>{
+        // Avoid calling Supabase APIs directly inside the auth callback.
+        setTimeout(()=>{
+          const newUser=session?.user||null;
+          if(newUser?.id!==activeUser?.id || (!newUser && activeUser)) hydrateMember(newUser);
+        },0);
+      });
+      const {data,error}=await cloud.auth.getSession();
+      if(error)throw error;
+      await hydrateMember(data.session?.user||null);
+    }catch(err){console.warn('Supabase initialization',err);cloudReady=true;accountFeedback(accountString('تعذر الاتصال بالخدمة.','Could not connect to Supabase.'));}
+  }
+  function humanAuthError(err){
+    const message=String(err?.message||'');
+    if(/invalid login credentials/i.test(message))return accountString('الإيميل أو كلمة المرور غير صحيحة.','Invalid email or password.');
+    if(/email not confirmed/i.test(message))return accountString('لازم تفعّل حسابك من رابط الإيميل أول.','Confirm your email address first.');
+    if(/user already registered/i.test(message))return accountString('الإيميل مسجل من قبل. جرّب تسجل دخول.','This email is already registered. Please sign in.');
+    if(/password/i.test(message) && /short|least|weak|character/i.test(message))return accountString('خل كلمة المرور أقوى (6 أحرف على الأقل).','Use a stronger password (at least 6 characters).');
+    return message||accountString('صار خطأ بالاتصال، جرّب مرة ثانية.','Something went wrong; please retry.');
+  }
+  function setupAccountUI(){
+    $('#accountBtn').addEventListener('click',showAccount);
+    $('#authClose').addEventListener('click',hideAccount);
+    $('#authModal').addEventListener('click',e=>{if(e.target.id==='authModal')hideAccount();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')hideAccount();});
+    $('#authLoginTab').addEventListener('click',()=>{authMode='login';accountFeedback('');updateAuthLabels();});
+    $('#authSignupTab').addEventListener('click',()=>{authMode='signup';accountFeedback('');updateAuthLabels();});
+    $('#authForm').addEventListener('submit',async e=>{
+      e.preventDefault();
+      if(authWorking)return;
+      if(!cloud){accountFeedback(accountString('تحقق من اتصال الإنترنت وحاول مرة ثانية.','Check your internet connection and try again.'));return;}
+      const email=$('#authEmail').value.trim();const password=$('#authPassword').value;
+      const name=$('#authName').value.trim().slice(0,32)||'محقق جديد';
+      authWorking=true;$('#authSubmit').disabled=true;accountFeedback(accountString('جاري الاتصال…','Connecting…'));
+      try{
+        const {data,error}=authMode==='signup' ?
+          await cloud.auth.signUp({email,password,options:{data:{display_name:name},emailRedirectTo:location.origin+location.pathname}}) :
+          await cloud.auth.signInWithPassword({email,password});
+        if(error)throw error;
+        if(authMode==='signup' && !data.session){
+          accountFeedback(accountString('تم! افتح إيميلك واضغط رابط تفعيل الحساب، بعدها سجل دخول.','Account created! Check your inbox for a confirmation link, then sign in.'),true);
+        }else{
+          await hydrateMember(data.user||data.session?.user);
+          accountFeedback(accountString('تم تسجيل الدخول بنجاح ✅','Signed in successfully ✅'),true);
+          setTimeout(hideAccount,750);
+        }
+      }catch(err){accountFeedback(humanAuthError(err));}
+      finally{authWorking=false;$('#authSubmit').disabled=false;}
+    });
+    $('#authReset').addEventListener('click',async()=>{
+      const email=$('#authEmail').value.trim();
+      if(!email){accountFeedback(accountString('حط بريدك الإلكتروني أول.','Enter your email first.'));return;}
+      if(!cloud){accountFeedback(accountString('الخدمة غير متاحة.','Service unavailable.'));return;}
+      const {error}=await cloud.auth.resetPasswordForEmail(email,{redirectTo:location.origin+location.pathname});
+      accountFeedback(error?humanAuthError(error):accountString('إذا الإيميل مسجل، راح توصلك رسالة لاسترجاع كلمة المرور.','If the email is registered, you will receive a recovery email.'),!error);
+    });
+    $('#profileForm').addEventListener('submit',async e=>{
+      e.preventDefault();
+      if(!cloud||!activeUser)return;
+      const name=$('#profileNameInput').value.trim().slice(0,32);
+      if(!name){accountFeedback(accountString('اكتب اسم المحقق.','Enter a detective name.'));return;}
+      $('#profileSave').disabled=true;
+      const {error}=await cloud.from('bf_profiles').update({display_name:name}).eq('user_id',activeUser.id);
+      $('#profileSave').disabled=false;
+      if(error){accountFeedback(humanAuthError(error));return;}
+      profile={...(profile||{}),display_name:name};renderAccount();accountFeedback(accountString('تم تحديث الاسم ✅','Name updated ✅'),true);
+      if(currentView==='stats')loadLeaderboard();
+    });
+    $('#signOutBtn').addEventListener('click',async()=>{
+      if(cloud){const {error}=await cloud.auth.signOut();if(error){accountFeedback(humanAuthError(error));return;}}
+      await hydrateMember(null);hideAccount();go('home');showToast(accountString('طلعت من الحساب. تقدر تلعب كضيف.','Signed out. You can still play as a guest.'));
+    });
+    $('#refreshBoard').addEventListener('click',loadLeaderboard);
+    $$('[data-period]').forEach(b=>b.addEventListener('click',()=>{boardPeriod=b.dataset.period;updateBoardLabels();loadLeaderboard();}));
+  }
+
   async function shareResult(){
     const icons={case:'🔎',code:'⌗',memory:'◉',timeline:'≋'};
     const report=`✦ BLACK FILE | ${lang==='ar'?'الملف الأسود':'BLACK FILE'}\n${readableDate()}\n`+DATA.games.map(g=>`${icons[g.id]} ${t(g.name)}: ${outcome(g.id)?outcome(g.id).score+'/'+g.max:'—'}`).join('\n')+`\n✦ ${t('score')}: ${scoreToday()}/500\n${location.origin.startsWith('http')?location.origin+location.pathname:''}`;
@@ -509,13 +773,13 @@ window.BLACKFILE_DATA = {
     document.addEventListener('keydown',e=>{if(e.key==='Escape')hidePremium();});
     document.addEventListener('click',e=>{const b=e.target.closest('[data-launch]');if(b)launch(b.dataset.launch);});
     $('#shareBtn').addEventListener('click',shareResult);
+    setupAccountUI();
+    initCloud();
     $('#languageBtn').addEventListener('click',()=>{
       lang=lang==='ar'?'en':'ar';saved.lang=lang;persist();translateStatic();paintProgress();paintArchive();paintStats();
       if(currentView==='play'&&currentGame)launch(currentGame);
     });
-    if('serviceWorker' in navigator && location.protocol.startsWith('http')){
-      navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
-    }
+    // Single-file GitHub Pages build: no service worker, so updates take effect normally.
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();
