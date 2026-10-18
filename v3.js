@@ -146,7 +146,7 @@ async function saveCase(e){
  }catch(err){toast('تعذر الحفظ: '+err.message);}finally{button.disabled=false;}
 }
 function adminTab(tab){
- const ids={cases:'bfAdminCases',notices:'bfAdminNotices',members:'bfAdminMembers'};
+ const ids={cases:'bfAdminCases',notices:'bfAdminNotices',members:'bfAdminMembers',control:'bfAdminControl',control:'bfAdminControl'};
  for(const [name,id] of Object.entries(ids))byId(id).classList.toggle('hidden',name!==tab);
  document.querySelectorAll('[data-admintab]').forEach(b=>b.classList.toggle('active',b.dataset.admintab===tab));
 }
@@ -155,7 +155,7 @@ async function sendNotice(e){
  const button=e.submitter;button.disabled=true;
  try{
   const member=byId('bfNoticeAudience').value==='one'?Number(byId('bfNoticeMember').value):null;
-  if(byId('bfNoticeAudience').value==='one'&&!member)throw new Error('حدد رقم العضوية.');
+  if(byId('bfNoticeAudience').value==='one'&&(!member||!Number.isSafeInteger(member)))throw new Error('اختار مستلماً من القائمة قبل إرسال التنبيه.');
   const id=await rpc('bf_admin_notice',{p_title:byId('bfNoticeTitle').value.trim(),p_body:byId('bfNoticeBody').value.trim(),p_member:member});
   byId('bfNoticeForm').reset();byId('bfNoticeMemberWrap').classList.add('hidden');
   message(byId('bfPushStatus'),'✅ تم نشر الإشعار داخل الموقع. جاري محاولة إرسال Push إذا كان الخادم مفعّلاً…');
