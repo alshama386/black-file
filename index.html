@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#10141b" />
+  <meta name="description" content="الملف الأسود: أربع تحديات جديدة كل يوم. حقّق في القضايا، فك الشفرات وتحدّ أصدقاءك." />
+  <meta property="og:title" content="الملف الأسود | BLACK FILE" />
+  <meta property="og:description" content="ملف جديد كل يوم. كم دليل تحتاج لاكتشاف الحقيقة؟" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIzIiBmaWxsPSIjMTExNjFlIi8+PHBhdGggZD0iTTI1IDE5aDUwdjYySDI1eiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZDhiNDc0IiBzdHJva2Utd2lkdGg9IjMiLz48dGV4dCB4PSI1MCIgeT0iNjIiIGZvbnQtc2l6ZT0iMzYiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZjZlZGUwIj5CRjwvdGV4dD48cGF0aCBkPSJNMjggNzRoNDQiIHN0cm9rZT0iI2Q4YjQ3NCIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+Cg==" />
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@500;600;700&display=swap');
+:root{--ink:#10141b;--ink2:#202730;--cream:#f8f6f0;--paper:#fffefa;--line:#e7e1d6;--muted:#727673;--gold:#c3a272;--red:#a8454b;--green:#36765d;--white:#fff;--shadow:0 17px 50px #181a1b10}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'Cairo',Arial,sans-serif;line-height:1.7}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.47}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:3px}button{transition:background .16s,transform .16s}button:active:not(:disabled){transform:scale(.985)}[hidden],.hidden{display:none!important}a{color:inherit;text-decoration:none}.container{max-width:1130px;margin-inline:auto;padding-inline:23px}.site-shell{min-height:100vh;overflow:hidden}.site-header{background:var(--cream);border-bottom:1px solid var(--line);height:88px;position:relative;z-index:10}.header-inner{display:flex;justify-content:space-between;align-items:center;height:100%;gap:22px}.brand{display:flex;align-items:center;gap:11px;white-space:nowrap}.brand-symbol{width:49px;height:49px;background:var(--ink);color:#f6ede0;display:flex;align-items:center;justify-content:center;font:800 20px 'IBM Plex Mono',monospace;position:relative;transform:rotate(-3deg);border-radius:5px}.brand-star{position:absolute;color:var(--gold);font-size:12px;top:-7px;left:-5px}.brand-type{line-height:1.2;display:flex;flex-direction:column}.brand-type strong{font-weight:900;font-size:20px}.brand-type small{letter-spacing:2px;font:700 10px 'IBM Plex Mono';color:#757a77;margin-top:6px}.desktop-nav{display:flex;align-items:center;gap:30px}.nav-item{background:none;border:0;font-weight:800;color:#727a78;font-size:12px;padding:12px 0;white-space:nowrap;position:relative}.nav-item.active{color:var(--ink)}.nav-item.active:after{content:'';height:2px;background:var(--red);width:100%;position:absolute;bottom:2px;right:0}.header-actions{display:flex;gap:8px;align-items:center}.lang-btn{border:1px solid #ddd7cc;background:transparent;color:#434845;border-radius:5px;padding:11px 13px;font:700 11px 'IBM Plex Mono'}.premium-top{border:0;background:var(--red);color:white;border-radius:5px;padding:12px 18px;font-weight:900;font-size:12px;white-space:nowrap}.premium-top span:first-child{color:#f5d8ad}.news-strip{display:flex;align-items:center;gap:12px;margin:23px 0 14px;font-size:11px;color:#6a6d6a}.news-pill{border:1px solid #e1d9c9;border-radius:50px;padding:4px 12px;font-weight:900;color:#484f4d;display:inline-flex;align-items:center;gap:8px}.live-dot{height:6px;width:6px;background:var(--red);border-radius:50%;display:inline-block}.edition-number{margin-inline-start:auto;letter-spacing:1px;font:700 10px 'IBM Plex Mono';color:#9c8468}.hero{display:grid;grid-template-columns:1.15fr .85fr;min-height:370px;border-radius:11px;overflow:hidden;color:white;background:var(--ink);position:relative}.hero-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 58% 64%,#8a52311d,transparent 41%)}.hero-copy{padding:45px 52px 44px 35px;position:relative;z-index:1}.eyebrow{font-weight:800;color:var(--gold);font-size:11px;letter-spacing:1.2px}.eyebrow-line{display:inline-block;width:27px;height:1px;background:var(--gold);vertical-align:middle;margin-inline-end:9px}.hero h1{font-size:clamp(37px,4.8vw,64px);line-height:1.25;margin:16px 0 12px;font-weight:900}.hero h1 em{font-style:normal;color:#e8bd80}.hero-desc{max-width:460px;font-size:14px;color:#d8d8d5;margin:0 0 19px}.hero-buttons{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;gap:12px;border-radius:5px;padding:12px 18px;border:0;font-size:12px;font-weight:900;min-height:45px}.button-primary{background:var(--red);color:white}.button-primary:hover{background:#8b3238}.button-outline{color:#fff;background:transparent;border:1px solid #ffffff64}.button-light{background:#f4ebdc;color:#473e33}.button-full{width:100%}.arrow-icon{font-size:16px}.hero-metrics{display:flex;align-items:center;gap:22px;margin-top:28px;color:#c1bcb0}.hero-metrics>div{display:flex;flex-direction:column;line-height:1.45}.hero-metrics b{font:700 23px 'IBM Plex Mono';color:#f1e0bc}.hero-metrics span{font-size:10px}.hero-metrics .metric-rule{width:1px;height:31px;background:#ffffff33}.hero-metrics .mini-unit{font:700 10px 'Cairo';padding-right:3px;color:#e1bd8b}.hero-art{position:relative;min-height:370px;background:radial-gradient(circle at 58% 38%,#373038 0%,#171c21 75%);overflow:hidden}.hero-art:before{content:'';position:absolute;width:300px;height:300px;border:1px dashed #b89c713b;border-radius:50%;top:35px;right:calc(50% - 150px)}.hero-ornament{position:absolute;width:400px;height:400px;border:1px solid #ffffff08;border-radius:50%;pointer-events:none}.ornament-one{right:36%;top:-220px}.ornament-two{right:52%;top:40%}.folder{position:absolute;width:210px;height:247px;right:calc(50% - 105px);top:65px;border-radius:4px}.folder-back{background:#8e806e;transform:rotate(12deg) translate(16px,5px);box-shadow:0 18px 30px #0008}.folder-main{background:#c5ad87;transform:rotate(-8deg);box-shadow:10px 24px 40px #090909a1;color:#604c38;padding:42px 23px}.folder-main:before{content:'';position:absolute;width:89px;height:14px;right:0;top:-11px;background:#c5ad87;border-radius:4px 4px 0 0}.folder-mark{font:800 51px 'IBM Plex Mono';letter-spacing:-3px}.folder-mark span{color:#973941}.folder-rule{width:100%;height:1px;background:#957d5d;margin:8px 0}.folder-id{font:700 9px 'IBM Plex Mono';line-height:1.8}.stamped{position:absolute;left:12px;bottom:14px;color:#9e4248;border:3px double #9e4248;padding:4px 12px;line-height:1;font:800 15px 'IBM Plex Mono';transform:rotate(-12deg);text-align:center}.folder-corner{position:absolute;bottom:0;right:0;width:30px;height:30px;background:#ae997c;clip-path:polygon(0 100%,100% 0,100% 100%)}.paper-note{position:absolute;right:11%;bottom:9%;transform:rotate(15deg);color:#d8c9b3;font:700 11px 'IBM Plex Mono';display:flex;gap:12px}.paperclip{position:absolute;width:20px;height:66px;border:4px solid #d3ba91;border-radius:16px;left:26%;top:12%;transform:rotate(15deg)}.daily-section{margin-top:40px}.section-heading,.page-header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:19px}.section-eyebrow{font:800 11px 'IBM Plex Mono',monospace;letter-spacing:1.3px;color:#b38859}.section-heading h2,.page-header h1{font-size:29px;margin:2px 0;font-weight:900;line-height:1.35}.section-heading p,.page-header p{font-size:12px;color:#737773;margin:3px 0}.text-link{border:0;background:transparent;color:var(--red);font-size:12px;font-weight:900;white-space:nowrap}.heading-star{color:var(--red)}.game-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.game-card{border:1px solid #e7dfd0;border-radius:8px;background:#fffdf8;padding:22px 19px;text-align:right;display:flex;flex-direction:column;min-height:244px;transition:box-shadow .15s,transform .15s}.game-card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}.card-gold{background:#f0e7da}.card-blue .card-emblem{background:#e5ebf1;color:#54738b}.card-pink .card-emblem{background:#f5e8e4;color:#b65d62}.card-green .card-emblem{background:#e4eee6;color:#52816a}.card-gold .card-emblem{background:#e6d5bb;color:#8e6240}.card-top{display:flex;justify-content:space-between;align-items:center;font:800 9px 'IBM Plex Mono';color:#a38667;gap:8px}.card-emblem{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;font-size:31px;margin:16px 0 12px;color:var(--red)}.card-category{font:800 9px 'IBM Plex Mono';color:#b18962;letter-spacing:.9px}.game-card h3{font-size:19px;margin:5px 0 6px}.game-card p{font-size:11px;color:#6c7470;line-height:1.85;margin:0 0 auto}.card-footer{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:23px;font-size:11px;font-weight:800;color:var(--red)}.card-go{font-size:18px}.game-state{font-size:10px;color:var(--green);font-weight:800}.promo-banner{border-radius:9px;margin:27px 0 55px;background:#e5dfd3;display:flex;align-items:center;gap:20px;padding:28px 31px}.promo-icon{border:2px solid #ad8d5e;color:#ac7941;height:67px;width:67px;border-radius:50%;display:grid;place-items:center;font-size:30px;flex-shrink:0}.promo-banner>div:nth-child(2){flex:1}.promo-banner h3{font-size:21px;margin:4px 0}.promo-banner p{font-size:12px;color:#656965;margin:0}.promo-banner .button{white-space:nowrap}.view{min-height:340px}.view:not(.page-home){padding:31px 0 55px}.issue-tag{font:800 10px 'IBM Plex Mono';color:#716a60;border:1px solid #e0d8cc;padding:10px 14px}.progress-panel{background:#eae4d9;padding:20px;display:flex;align-items:center;gap:22px;border-radius:7px;margin-bottom:20px}.progress-panel>div{flex:1}.progress-top{display:flex;justify-content:space-between;gap:15px;font-size:12px}.progress-bar{background:#d4cabe;height:6px;border-radius:9px;overflow:hidden;margin-top:12px}.progress-bar div{background:var(--red);height:100%;width:0;transition:width .2s}.score-badge{font:800 18px 'IBM Plex Mono';color:var(--red)}.archive-seal{font-size:28px;color:#b38d64}.archive-intro{background:#e8e0d3;border:1px solid #ded2c2;border-radius:7px;display:flex;align-items:center;gap:17px;padding:21px 25px;margin-bottom:20px}.archive-intro>span{font-size:32px;color:#ac8c64}.archive-intro>div{flex:1}.archive-intro b{font-size:17px}.archive-intro p{font-size:12px;color:#6d6b67;margin:3px 0}.archive-list{display:flex;flex-direction:column;gap:9px}.archive-row{background:white;border:1px solid var(--line);border-radius:7px;padding:18px 22px;display:flex;align-items:center;gap:14px}.archive-file-icon{font-size:28px;color:#987f61;width:45px;text-align:center}.archive-row-copy{flex:1}.archive-row-copy b{display:block;font-size:15px}.archive-row-copy p{font-size:11px;color:var(--muted);margin:2px 0}.archive-lock{font:800 11px 'IBM Plex Mono';color:#957e5a}.archive-go{color:var(--red);font-size:22px}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:22px 0}.stat-card{background:white;border:1px solid var(--line);border-radius:8px;padding:23px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:3px}.stat-icon{font-size:26px;color:var(--gold)}.stat-card b{font:800 31px 'IBM Plex Mono';color:var(--red)}.stat-card span{color:#6a716d;font-size:12px;font-weight:800}.stats-bottom{display:grid;grid-template-columns:1fr .77fr;gap:16px}.stats-record,.stats-info{background:white;border:1px solid var(--line);border-radius:8px;padding:24px}.stats-record h3,.stats-info h3{margin:0 0 14px;font-size:19px}.stats-info{background:#ece4d5}.stats-info p{font-size:12px;color:#686f69}.tiny-glyph{font-size:33px;color:var(--gold)}.record-row{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);font-size:12px}.record-symbol{color:var(--red)}.stats-record .button{margin-top:20px}.back-link{border:0;background:transparent;color:var(--red);font-weight:900;font-size:12px;margin-bottom:18px;padding:0}.play-head{display:flex;justify-content:space-between;gap:20px;align-items:center;margin:0 0 20px}.play-head h1{font-size:31px;line-height:1.3;margin:4px 0}.play-head p{font-size:13px;color:#717773;margin:0}.play-state{padding:7px 15px;background:#ece6dc;color:#765740;font:800 11px 'IBM Plex Mono';border-radius:4px}.game-stage{min-height:320px}.case-banner{border-top:5px solid var(--ink);display:flex;gap:16px;background:#e8dfd2;padding:26px;border-radius:9px;position:relative;overflow:hidden}.case-banner-icon{font-size:40px;line-height:1}.case-heading{flex:1}.case-heading h2{font-size:26px;margin:0 0 6px}.case-heading p{font-size:13px;margin:0;color:#645b50}.case-watermark{font:900 45px 'IBM Plex Mono';color:#cfbca3}.case-brief,.challenge-instructions,.fact-card{background:white;border:1px solid var(--line);border-radius:8px;padding:23px;margin-top:16px}.case-brief h3,.challenge-instructions h2{margin:0 0 8px;font-size:20px}.case-brief p,.challenge-instructions p{font-size:13px;color:#636b67;line-height:2;margin:0}.evidence-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin:16px 0}.evidence-card{display:flex;gap:13px;text-align:right;border:1px solid var(--line);background:#fffdf8;border-radius:7px;padding:18px;align-items:flex-start}.evidence-card:focus-visible{outline-color:var(--red)}.evidence-num{font:800 10px 'IBM Plex Mono';color:#bb9970}.evidence-card b{font-size:13px}.evidence-card p{font-size:12px;color:#69706a;line-height:2}.evidence-card.open,.evidence-card.is-open{background:#eaf0e8;border-color:#a9c3a6}.clue-icon{font-size:25px;color:var(--red)}.clue-detail{color:#4c5e51}.small-label{font:800 11px 'IBM Plex Mono';color:#9b7552}.suspect-heading{font-size:18px;margin:0 0 10px}.suspects-list{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}.suspect{display:flex;align-items:center;gap:14px;text-align:right;background:white;border:1px solid var(--line);padding:15px;border-radius:7px}.suspect.selected,.suspect.is-selected{background:#f3e4e3;border-color:#b76d6a}.suspect-avatar{display:grid;place-items:center;width:42px;height:42px;background:#f1ebe2;border-radius:50%;font-size:22px}.suspect-copy{flex:1}.suspect-copy b{display:block;font-size:13px}.suspect-copy p{font-size:11px;color:#73776f;margin:2px 0}.suspect-radio{height:17px;width:17px;border:2px solid #b9b1a5;border-radius:50%}.verdict-bar{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0}.helper-copy{font-size:12px;color:#85817b}.challenge-layout,.timeline-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:17px;align-items:start}.challenge-instructions{margin:0}.challenge-icon{font-size:51px;color:var(--red);line-height:1.3;margin-bottom:17px}.challenge-main,.timeline-main{background:#fffefa;border:1px solid var(--line);border-radius:8px;padding:23px}.code-form{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.code-form input{font:800 31px 'IBM Plex Mono';letter-spacing:8px;max-width:220px;width:100%;min-height:57px;border-radius:5px;border:1px solid #d7c8b4;background:white;text-align:center;direction:ltr}.code-board{display:flex;flex-direction:column;gap:9px;margin-top:19px}.code-row{display:flex;align-items:center;gap:8px;justify-content:space-between;background:#f5f0e9;padding:10px;border-radius:5px}.digit-box{display:inline-flex;align-items:center;justify-content:center;width:37px;height:43px;background:white;border:1px solid #ded6ca;border-radius:4px;font:800 20px 'IBM Plex Mono';margin-left:5px}.digit-box.exact{background:#d8b77d;color:#42341e}.digit-box.partial{background:#91b7c5;color:#193541}.code-feedback{font-size:11px;color:#656e68}.legend-row{display:flex;gap:18px;flex-wrap:wrap;margin:17px 0;color:#606b67;font-size:11px}.hint-dot{display:inline-block;height:9px;width:9px;border-radius:2px;background:#d8b77d;margin-left:6px}.hint-dot.partial{background:#91b7c5}.memory-reveal{text-align:center;padding:25px 10px}.memory-count{font:800 35px 'IBM Plex Mono';color:var(--red)}.memory-symbols{display:grid;grid-template-columns:repeat(6,1fr);gap:9px;margin:15px 0}.memory-symbol{display:grid;place-items:center;border:1px solid #e5d9cc;background:#f7f1e8;border-radius:5px;min-height:85px;font-size:33px}.quiz-stage h2{font-size:21px}.quiz-progress{font-size:12px;color:#8a826f}.quiz-options{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:21px 0}.symbol-option{font-size:30px;min-height:80px;background:#f5eee3;border:1px solid #e1d4c1;border-radius:6px}.symbol-option:hover{border-color:var(--red)}.timeline-row{display:flex;align-items:center;gap:11px;background:#f6f0e8;padding:14px;margin-bottom:10px;border:1px solid #e2d4c3;border-radius:6px}.timeline-position{width:30px;height:30px;display:grid;place-items:center;background:#ddc5a3;border-radius:50%;font:800 12px 'IBM Plex Mono';flex-shrink:0}.timeline-text{flex:1;font-size:13px;font-weight:700}.move-controls{display:flex;gap:6px}.move-controls button{width:31px;height:31px;border:1px solid #d2c2ac;background:white;border-radius:5px}.timeline-main .button{margin-top:10px}.end-card{text-align:center;background:#fffefa;border:1px solid var(--line);border-radius:10px;padding:32px;max-width:620px;margin:auto}.end-symbol{font-size:58px;color:var(--red);margin-bottom:7px}.end-card h2{font-size:29px;margin:7px}.end-score{font:900 43px 'IBM Plex Mono';color:var(--red)}.end-detail{background:#f2ede5;border-radius:5px;padding:17px;margin-top:16px;font-size:13px;line-height:2;text-align:right}.end-footnote{font-size:12px;color:var(--muted)}.end-actions{display:flex;justify-content:center;gap:10px;margin-top:20px;flex-wrap:wrap}.intro-challenge{background:white;border:1px solid var(--line);border-radius:8px;padding:28px;text-align:center}.big-illustration{font-size:65px}.empty-box{border:1px dashed #d7cbba;border-radius:5px;padding:25px;color:#7b7973;text-align:center}.site-footer{border-top:1px solid var(--line);padding-top:27px;padding-bottom:35px;color:#72746d;font-size:11px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer-brand{font-weight:900;color:#383d3c}.footer-sep{margin:0 9px}.mobile-nav{display:none}.modal-backdrop{position:fixed;inset:0;z-index:110;background:#0c1012ae;backdrop-filter:blur(3px);display:grid;place-items:center;padding:15px}.modal{width:min(100%,465px);max-height:calc(100vh - 30px);overflow-y:auto;background:#fffdf8;border-radius:11px;padding:26px;box-shadow:0 30px 90px #0007;position:relative}.modal-close{position:absolute;left:18px;top:16px;width:34px;height:34px;background:#ebe5db;border:0;border-radius:50%;font-size:22px}.modal-crown{font-size:35px;color:var(--red)}.modal h2{font-size:25px;margin:4px 0}.modal p{font-size:12px;color:#6f746e;line-height:2}.plan-list{display:grid;gap:9px;margin:21px 0}.plan{border:1px solid var(--line);border-radius:7px;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:15px;background:#fff}.plan-popular{border-color:#c89c77;background:#f3ebdf}.plan b{font-size:15px;display:block}.plan small{color:#858276;font-size:10px}.plan-price{white-space:nowrap;font:800 20px 'IBM Plex Mono';color:var(--red)}.plan-price span{font:700 11px 'Cairo'}.disclaimer{font-size:10px!important}.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(18px);background:#16201e;color:white;font-size:12px;padding:12px 20px;z-index:200;opacity:0;pointer-events:none;border-radius:6px;transition:opacity .16s,transform .16s}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:900px){.desktop-nav{gap:13px}.header-inner{gap:14px}.hero-copy{padding:34px}.game-grid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:44px}.hero-metrics{gap:11px}.challenge-layout,.timeline-layout{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.container{padding-inline:16px}.site-header{height:76px}.desktop-nav{display:none}.brand-symbol{width:43px;height:43px;font-size:18px}.brand-type strong{font-size:16px}.brand-type small{font-size:8px}.header-actions .premium-top{font-size:10px;padding:10px 13px}.header-actions .lang-btn{padding:10px}.news-strip{margin:17px 0 11px;gap:8px;flex-wrap:wrap;font-size:10px}.hero{grid-template-columns:1fr;min-height:auto}.hero-copy{padding:34px 28px}.hero h1{font-size:40px}.hero-desc{font-size:12px}.hero-art{min-height:166px}.folder{width:125px;height:143px;top:20px;right:calc(50% - 62px)}.folder-main{padding:23px 15px}.folder-main:before{width:50px;height:9px;top:-7px}.folder-mark{font-size:30px}.folder-id{font-size:6px}.folder-rule{margin:4px 0}.stamped{font-size:8px;left:7px;bottom:7px}.hero-art:before{height:180px;width:180px;right:calc(50% - 90px);top:0}.hero-metrics{justify-content:space-between}.section-heading h2,.page-header h1{font-size:24px}.section-heading{align-items:center}.section-heading p{font-size:11px}.game-grid{gap:10px}.game-card{padding:17px 14px;min-height:235px}.card-emblem{height:51px;width:51px;font-size:27px}.game-card h3{font-size:16px}.game-card p{font-size:10px}.card-footer{margin-top:12px}.promo-banner{padding:23px;flex-wrap:wrap;gap:12px;margin-bottom:34px}.promo-icon{height:48px;width:48px;font-size:22px}.promo-banner h3{font-size:17px}.promo-banner .button{margin-inline-start:auto}.site-footer{padding-bottom:92px}.mobile-nav{position:fixed;bottom:0;right:0;left:0;padding:7px 4px calc(7px + env(safe-area-inset-bottom));display:flex;justify-content:space-around;background:#fffdf8;border-top:1px solid var(--line);box-shadow:0 -8px 22px #0000000b;z-index:80}.mobile-nav button{display:flex;flex-direction:column;align-items:center;flex:1;background:transparent;border:0;color:#717875;font-size:19px;line-height:1.3}.mobile-nav button.active{color:var(--red)}.mobile-nav small{font-size:10px;font-weight:800}.page-header{align-items:center}.view:not(.page-home){padding:24px 0 48px}.archive-intro{flex-wrap:wrap}.archive-intro .button{margin-inline-start:auto}.stats-grid{grid-template-columns:repeat(2,1fr)}.stats-bottom{grid-template-columns:1fr}.challenge-layout,.timeline-layout{grid-template-columns:1fr}.case-heading h2{font-size:23px}.case-watermark{font-size:27px}.evidence-grid,.suspects-list{grid-template-columns:1fr 1fr}.memory-symbol{min-height:53px;font-size:25px}.toast{bottom:90px}}
+@media(max-width:420px){.brand-type small{display:none}.game-card{min-height:218px}.card-top,.card-category{font-size:8px}.game-card h3{font-size:15px}.game-card p{font-size:9px}.evidence-grid,.suspects-list{grid-template-columns:1fr}.quiz-options{grid-template-columns:repeat(2,1fr)}.stats-grid{gap:9px}.stat-card{padding:17px 7px}.stat-card b{font-size:25px}.hero-copy{padding:31px 22px}.hero h1{font-size:37px}.hero-metrics b{font-size:19px}}
+
+/* Additional small-state polish */
+.toast.shown{opacity:1;transform:translateX(-50%) translateY(0)}
+.evidence-card.examined{background:#ecf2ec;border-color:#aec6af}.evidence-card.examined .evidence-num{color:#3d7651}
+#gameStage .button-outline{border:1px solid #c4b8a8;color:#3b4440;background:transparent}
+.case-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:21px 0 10px}.case-heading h3{font-size:19px;margin:0}.case-heading small{color:#858078;font-size:11px}
+.case-heading.suspect-heading{margin-top:27px}.suspect-copy strong,.suspect-copy small,.suspect-copy q{display:block}.suspect-copy q{font-size:11px;color:#6e726e;font-weight:500;margin-top:2px;quotes:"«" "»"}.clue-detail:not(.hidden){background:#e9f0e9;border:1px solid #b8c8b9;padding:19px;border-radius:6px;margin:0 0 17px}.clue-detail h4{margin:5px 0;font-size:15px}.clue-detail p{font-size:13px;margin:0;color:#4b5c50}.archive-row-copy strong{font-size:15px;display:block}.archive-row-copy span{font-size:11px;color:#8a857b}.archive-go{background:transparent;border:0;padding:8px}.card-go{border:1px solid #ddd0c0;background:transparent;color:var(--red);border-radius:4px;min-width:36px;height:36px;font-size:18px}.card-go:hover{background:#f3e6dd}.intro-challenge .button{margin:15px auto}
+
+  </style>
+  <title>الملف الأسود · BLACK FILE</title>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="header-inner container">
+        <a class="brand" href="#home" aria-label="الملف الأسود، الرئيسية">
+          <div class="brand-symbol" aria-hidden="true"><span>BF</span><span class="brand-star">✦</span></div>
+          <div class="brand-type"><strong data-i18n="brand">الملف الأسود</strong><small>BLACK FILE</small></div>
+        </a>
+        <nav class="desktop-nav" aria-label="القائمة الرئيسية">
+          <button class="nav-item active" data-view="home" data-i18n="navHome">الرئيسية</button>
+          <button class="nav-item" data-view="games" data-i18n="navGames">ألعاب اليوم</button>
+          <button class="nav-item" data-view="archive" data-i18n="navArchive">الأرشيف</button>
+          <button class="nav-item" data-view="stats" data-i18n="navStats">إنجازاتي</button>
+        </nav>
+        <div class="header-actions">
+          <button id="languageBtn" class="lang-btn" aria-label="Switch language">EN</button>
+          <button id="premiumBtn" class="premium-top"><span aria-hidden="true">✦</span><span data-i18n="premium">العضوية</span></button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="container" tabindex="-1">
+      <section id="homeView" class="view page-home" aria-label="الرئيسية">
+        <div class="news-strip">
+          <span class="news-pill"><i class="live-dot"></i><span data-i18n="dailyEdition">الإصدار اليومي</span></span>
+          <span id="editionDate"></span>
+          <span class="edition-number" id="editionNo"></span>
+        </div>
+        <section class="hero" aria-labelledby="heroTitle">
+          <div class="hero-glow"></div>
+          <div class="hero-ornament ornament-one"></div><div class="hero-ornament ornament-two"></div>
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="heroOverline">الملف رقم ٠٠١ • التحقيق اليومي</span></div>
+            <h1 id="heroTitle"><span data-i18n="heroLine1">في كل يوم</span><br /><em data-i18n="heroLine2">سرّ جديد.</em></h1>
+            <p class="hero-desc" data-i18n="heroDesc">أربع تحديات تفتح كل يوم. اجمع الأدلة، اكسر الشفرات، واكتشف الحقيقة قبل الآخرين.</p>
+            <div class="hero-buttons">
+              <button class="button button-primary" id="startCaseBtn"><span data-i18n="startCase">افتح ملف اليوم</span><span class="arrow-icon">↗</span></button>
+              <button class="button button-outline" id="allGamesBtn" data-i18n="browseGames">اكتشف الألعاب</button>
+            </div>
+            <div class="hero-metrics">
+              <div><b>04</b><span data-i18n="gamesToday">تحديات يومية</span></div>
+              <span class="metric-rule"></span>
+              <div><b>07<span class="mini-unit" data-i18n="minutes">دقائق</span></b><span data-i18n="caseTime">لتفتح الحقيقة</span></div>
+              <span class="metric-rule"></span>
+              <div><b>100<span class="mini-unit">%</span></b><span data-i18n="freeDaily">لعب يومي مجاني</span></div>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="folder folder-back"></div>
+            <div class="folder folder-main">
+              <div class="folder-mark">B<span>F</span>.</div>
+              <div class="folder-rule"></div>
+              <div class="folder-id">CLASSIFIED / FILE <span id="folderFileId">001</span></div>
+              <div class="stamped">TOP<br>SECRET</div>
+              <div class="folder-corner"></div>
+            </div>
+            <div class="paper-note"><span>✧</span><span>18.10.26</span></div>
+            <div class="paperclip"></div>
+          </div>
+        </section>
+
+        <section class="daily-section" aria-labelledby="gamesHeading">
+          <div class="section-heading"><div><span class="section-eyebrow" data-i18n="dailyCollection">YOUR DAILY DOSE OF MYSTERY</span><h2 id="gamesHeading" data-i18n="todaysChallenges">تحديات اليوم <span class="heading-star">✦</span></h2><p data-i18n="dailyHint">كل يوم مجموعة جديدة. تقدر تلعب مجاناً وترجع باچر.</p></div><button class="text-link" data-view="games"><span data-i18n="viewAll">عرض الكل</span><span>↗</span></button></div>
+          <div id="homeGames" class="game-grid"></div>
+        </section>
+
+        <section class="promo-banner">
+          <div class="promo-icon">✦</div>
+          <div><span class="section-eyebrow">THE BLACK FILE CLUB</span><h3 data-i18n="promoTitle">بعض الملفات ما تنفتح للكل.</h3><p data-i18n="promoText">أرشيف القضايا، ملفات إضافية، وتحليلاتك التفصيلية — مع العضوية القادمة.</p></div>
+          <button class="button button-light" data-open-premium><span data-i18n="clubExplore">اكتشف العضوية</span> <span>↗</span></button>
+        </section>
+      </section>
+
+      <section id="gamesView" class="view hidden" aria-labelledby="gamesViewTitle">
+        <div class="page-header"><div><span class="section-eyebrow" data-i18n="dailyCollection">YOUR DAILY DOSE OF MYSTERY</span><h1 id="gamesViewTitle" data-i18n="playTitle">ملفات اليوم</h1><p data-i18n="playSubtitle">الأربع ألعاب تتجدد كل يوم عند منتصف الليل بتوقيت الكويت.</p></div><span class="issue-tag" id="gamesDate"></span></div>
+        <div class="progress-panel"><div><div class="progress-top"><strong data-i18n="dailyProgress">إنجازك اليوم</strong><span id="dailyCounter">0 / 4</span></div><div class="progress-bar"><div id="dailyProgressBar"></div></div></div><span class="score-badge" id="dailyScore">0 / 500</span></div>
+        <div id="allGameCards" class="game-grid full-grid"></div>
+      </section>
+
+      <section id="archiveView" class="view hidden" aria-labelledby="archiveTitle">
+        <div class="page-header"><div><span class="section-eyebrow">THE ARCHIVE / PREMIUM</span><h1 id="archiveTitle" data-i18n="archiveTitle">أرشيف الملفات</h1><p data-i18n="archiveDesc">القضايا اللي راحت ما اختفت. كلها تنتظرك مع عضوية الملف الأسود.</p></div><span class="archive-seal">✧</span></div>
+        <div class="archive-intro"><span>◈</span><div><b data-i18n="archivePromoTitle">افتح كل الأبواب</b><p data-i18n="archivePromoDesc">شوف القضايا السابقة والملفات الإضافية من مكان واحد. الأرشيف حالياً عرض تجريبي إلى أن نفعّل الاشتراكات.</p></div><button class="button button-primary" data-open-premium data-i18n="memberPlans">باقات العضوية</button></div>
+        <div id="archiveList" class="archive-list"></div>
+      </section>
+
+      <section id="statsView" class="view hidden" aria-labelledby="statsTitle">
+        <div class="page-header"><div><span class="section-eyebrow">YOUR DETECTIVE RECORD</span><h1 id="statsTitle" data-i18n="statsTitle">سجل المحقق</h1><p data-i18n="statsDesc">شوف تقدمك، حافظ على سلسلة أيامك، وشارك نتائجك.</p></div><span class="archive-seal">◈</span></div>
+        <div class="stats-grid"><div class="stat-card"><div class="stat-icon">◎</div><b id="statPlayed">0</b><span data-i18n="statPlayed">ألعاب مكتملة</span></div><div class="stat-card"><div class="stat-icon">♨</div><b id="statStreak">0</b><span data-i18n="statStreak">سلسلة أيام</span></div><div class="stat-card"><div class="stat-icon">✦</div><b id="statPerfect">0</b><span data-i18n="statPerfect">أيام كاملة</span></div><div class="stat-card"><div class="stat-icon">◆</div><b id="statPoints">0</b><span data-i18n="statPoints">مجموع النقاط</span></div></div>
+        <div class="stats-bottom"><div class="stats-record"><h3 data-i18n="dailyReport">تقرير اليوم</h3><div id="recordLines"></div><button id="shareBtn" class="button button-primary"><span data-i18n="shareResult">شارك نتيجتك</span> ↗</button></div><div class="stats-info"><span class="tiny-glyph">⌁</span><h3 data-i18n="privacyHeading">ملفك محفوظ عندك.</h3><p data-i18n="privacyNote">هذه النسخة التجريبية تحفظ نتائجك على نفس الجهاز فقط. الحسابات والمزامنة بين الأجهزة تنضاف عند ربط قاعدة البيانات.</p></div></div>
+      </section>
+
+      <section id="playView" class="view hidden" aria-labelledby="playTitle">
+        <button id="backToGames" class="back-link">→ <span data-i18n="backToGames">رجوع لألعاب اليوم</span></button>
+        <div class="play-head"><div><span id="playEyebrow" class="section-eyebrow"></span><h1 id="playTitle"></h1><p id="playDescription"></p></div><div id="playStatus" class="play-state"></div></div>
+        <div id="gameStage" class="game-stage"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer container"><div class="footer-brand">✦ BLACK FILE <span>—</span> <span data-i18n="footerTag">الحقيقة تلعب معك.</span></div><div><span>© <span id="footerYear"></span> BLACK FILE</span><span class="footer-sep">·</span><span data-i18n="prototype">نسخة أولية تجريبية</span></div></footer>
+
+    <nav class="mobile-nav" aria-label="القائمة السريعة"><button data-view="home"><span>⌂</span><small data-i18n="navHome">الرئيسية</small></button><button data-view="games"><span>▦</span><small data-i18n="navGames">ألعاب اليوم</small></button><button data-view="archive"><span>▤</span><small data-i18n="navArchive">الأرشيف</small></button><button data-view="stats"><span>◈</span><small data-i18n="navStats">إنجازاتي</small></button></nav>
+  </div>
+
+  <div id="premiumModal" class="modal-backdrop hidden" role="presentation">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="closeModal" aria-label="إغلاق">×</button><span class="modal-crown">✦</span><span class="section-eyebrow">BLACK FILE CLUB</span><h2 id="modalTitle" data-i18n="modalTitle">خلك أول من يفتح الأرشيف.</h2><p data-i18n="modalDesc">الاشتراكات الحقيقية قيد التجهيز. هذي معاينة للباقات، وماكو سحب فلوس أو دفع في النسخة الحالية.</p><div class="plan-list"><div class="plan"><div><b data-i18n="planMonthly">شهري</b><small data-i18n="planMonthlyDesc">الأرشيف + ملفات أسبوعية إضافية</small></div><div class="plan-price">1.990 <span data-i18n="kwd">د.ك</span></div></div><div class="plan plan-popular"><div><b data-i18n="planYearly">سنوي</b><small data-i18n="planYearlyDesc">كل المزايا + سعر أوفر</small></div><div class="plan-price">14.900 <span data-i18n="kwd">د.ك</span></div></div></div><button id="premiumConfirm" class="button button-primary button-full" data-i18n="previewOnly">تمام، فهمت — قريباً</button><p class="disclaimer" data-i18n="noPayments">تنويه: الدفع والتسجيل غير مفعّلين بعد، ولا يتم جمع أي بيانات مالية.</p></section>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script>
+/* BLACK FILE — All original fictional case content. Add new entries to CASES for new daily episodes. */
+window.BLACKFILE_DATA = {
+  translations: {
+    ar: {
+      brand:'الملف الأسود', navHome:'الرئيسية',navGames:'ألعاب اليوم',navArchive:'الأرشيف',navStats:'إنجازاتي',premium:'العضوية',dailyEdition:'الإصدار اليومي',
+      heroOverline:'الملف رقم ٠٠١ • التحقيق اليومي',heroLine1:'في كل يوم',heroLine2:'سرّ جديد.',heroDesc:'أربع تحديات تفتح كل يوم. اجمع الأدلة، اكسر الشفرات، واكتشف الحقيقة قبل الآخرين.',startCase:'افتح ملف اليوم',browseGames:'اكتشف الألعاب',gamesToday:'تحديات يومية',minutes:'دقائق',caseTime:'لتفتح الحقيقة',freeDaily:'لعب يومي مجاني',dailyCollection:'YOUR DAILY DOSE OF MYSTERY',todaysChallenges:'تحديات اليوم ✦',dailyHint:'كل يوم مجموعة جديدة. تقدر تلعب مجاناً وترجع باچر.',viewAll:'عرض الكل',promoTitle:'بعض الملفات ما تنفتح للكل.',promoText:'أرشيف القضايا، ملفات إضافية، وتحليلاتك التفصيلية — مع العضوية القادمة.',clubExplore:'اكتشف العضوية',playTitle:'ملفات اليوم',playSubtitle:'الأربع ألعاب تتجدد كل يوم عند منتصف الليل بتوقيت الكويت.',dailyProgress:'إنجازك اليوم',archiveTitle:'أرشيف الملفات',archiveDesc:'القضايا اللي راحت ما اختفت. كلها تنتظرك مع عضوية الملف الأسود.',archivePromoTitle:'افتح كل الأبواب',archivePromoDesc:'شوف القضايا السابقة والملفات الإضافية من مكان واحد. الأرشيف حالياً عرض تجريبي إلى أن نفعّل الاشتراكات.',memberPlans:'باقات العضوية',statsTitle:'سجل المحقق',statsDesc:'شوف تقدمك، حافظ على سلسلة أيامك، وشارك نتائجك.',statPlayed:'ألعاب مكتملة',statStreak:'سلسلة أيام',statPerfect:'أيام كاملة',statPoints:'مجموع النقاط',dailyReport:'تقرير اليوم',shareResult:'شارك نتيجتك',privacyHeading:'ملفك محفوظ عندك.',privacyNote:'هذه النسخة التجريبية تحفظ نتائجك على نفس الجهاز فقط. الحسابات والمزامنة بين الأجهزة تنضاف عند ربط قاعدة البيانات.',backToGames:'رجوع لألعاب اليوم',footerTag:'الحقيقة تلعب معك.',prototype:'نسخة أولية تجريبية',modalTitle:'خلك أول من يفتح الأرشيف.',modalDesc:'الاشتراكات الحقيقية قيد التجهيز. هذي معاينة للباقات، وماكو سحب فلوس أو دفع في النسخة الحالية.',planMonthly:'شهري',planMonthlyDesc:'الأرشيف + ملفات أسبوعية إضافية',planYearly:'سنوي',planYearlyDesc:'كل المزايا + سعر أوفر',kwd:'د.ك',previewOnly:'تمام، فهمت — قريباً',noPayments:'تنويه: الدفع والتسجيل غير مفعّلين بعد، ولا يتم جمع أي بيانات مالية.',
+      openFile:'ابدأ التحقيق',openGame:'ابدأ التحدي',done:'مكتمل',new:'جديد',point:'نقطة',points:'نقطة',playAgainTomorrow:'أحسنت! تحدي جديد ينفتح باچر.',locked:'للأعضاء',viewPlan:'اعرف أكثر',archiveDate:'ملف سابق',archiveNotice:'الأرشيف مغلق في النسخة التجريبية لحين تفعيل العضويات.',
+      caseName:'قضية اليوم',caseTag:'INVESTIGATION',caseCardDesc:'اقرأ الأدلة، استجوب المشتبه فيهم، وحدّد الفاعل.',codeName:'الشفرة',codeTag:'CODE BREAKER',codeCardDesc:'فك رمز الخزنة المكوّن من أربعة أرقام في ست محاولات.',memoryName:'ذاكرة الشاهد',memoryTag:'MEMORY TEST',memoryCardDesc:'احفظ المشهد جيداً وأجب عن ثلاث أسئلة.',timelineName:'خطّ الزمن',timelineTag:'TIMELINE',timelineCardDesc:'رتّب الأحداث بالترتيب الصحيح واكشف التسلسل.',
+      caseBrief:'ملخص البلاغ',evidenceTitle:'الأدلة المجمّعة',evidenceHint:'اضغط على الأدلة لقراءة تفاصيلها. افتح دليلين على الأقل قبل إصدار الحكم.',suspectTitle:'المشتبه فيهم',suspectHint:'اقرأ إفاداتهم واختَر الشخص المسؤول.',verdict:'أصدر الحكم',pickSuspect:'اختَر مشتبهاً فيه أولاً.',needEvidence:'افتح دليلين على الأقل قبل الحكم.',resolution:'نتيجة التحقيق',right:'تحقيق ناجح!',wrong:'الحقيقة كانت مختلفة',resultCorrect:'أحسنت! وصلت للفاعل.',resultWrong:'مو هذا الفاعل، شوف شلون كانت الحقيقة.',tryOther:'العب تحدياً ثاني',evidenceSeen:'أدلة فُحصت',
+      codeInfo:'الرمز مكوّن من ٤ أرقام. كل رقم صحيح بمكانه يظهر باللون الذهبي، والصحيح بمكان غلط يظهر بالأزرق.',codeInput:'أدخل ٤ أرقام',tryGuess:'جرّب الرمز',attemptsLeft:'المحاولات المتبقية',codeWon:'فتحت الخزنة!',codeLost:'انتهت المحاولات',secretWas:'الرمز الصحيح كان',codeExact:'بالمكان الصحيح',codePartial:'صحيح ولكن بمكان آخر',invalidCode:'اكتب أربعة أرقام.',
+      memoryReady:'جاهز تختبر ذاكرتك؟',memoryInstructions:'راح تشوف ٦ رموز لمدة ٧ ثوانٍ. ركّز على ترتيبها، وبعدها تجاوب ٣ أسئلة.',showScene:'شوف المشهد',memorize:'احفظ الرموز!',memoryQuestion:'السؤال',nextQuestion:'السؤال اللي بعده',finishMemory:'اعرض النتيجة',yourScore:'نتيجتك',memoryFinished:'انتهى اختبار الذاكرة',
+      timelineInfo:'هذي الأحداث مبعثرة. حرّك كل حدث لفوق أو لتحت لين يصير التسلسل صحيح.',submitOrder:'تحقّق من الترتيب',timelineWon:'رتّبت الأحداث صح!',timelineLost:'خلصت المحاولات',timelineTryAgain:'الترتيب مو صحيح. عندك محاولة ثانية.',correctOrder:'الترتيب الصحيح',
+      alreadyDone:'خلصت هاللعبة اليوم',alreadyDoneDesc:'تحصل تحديات جديدة باچر. نتائجك محفوظة في سجل المحقق.',noCompleted:'ما خلصت أي لعبة اليوم. بلّش أول تحدّي!',shareCopied:'انسخت النتيجة — دزّها لربعك!',shareFailed:'ما قدرنا ننسخ. تقدر تصور الشاشة وتشاركها.',dayLabel:'يوم',issueLabel:'الإصدار',daysAgo:'قبل',day:'يوم',timeKuwait:'توقيت الكويت',nowPlaying:'قيد اللعب',score:'النقاط',facts:'ملفات خيالية للتسلية، مو أحداث حقيقية.',
+      memoryThird:'شنو كان الرمز الثالث؟',memoryLast:'شنو كان آخر رمز؟',memoryAbsent:'أي رمز ما ظهر بالمشهد؟',gameFinished:'انتهى التحدّي!',fromMax:'من',comeTomorrow:'تعال باچر لتحديات جديدة.',
+    },
+    en: {
+      brand:'Black File',navHome:'Home',navGames:'Today’s games',navArchive:'Archive',navStats:'My stats',premium:'Membership',dailyEdition:'Daily edition',heroOverline:'FILE NO. 001 • DAILY INVESTIGATION',heroLine1:'Every day,',heroLine2:'a new mystery.',heroDesc:'Four challenges unlock every day. Examine clues, crack the code, and uncover the truth.',startCase:'Open today’s file',browseGames:'Explore games',gamesToday:'daily challenges',minutes:'min',caseTime:'to crack the case',freeDaily:'free daily play',dailyCollection:'YOUR DAILY DOSE OF MYSTERY',todaysChallenges:'Today’s challenges ✦',dailyHint:'A fresh set every day. Play free and return tomorrow.',viewAll:'View all',promoTitle:'Some files aren’t for everyone.',promoText:'Past cases, bonus files, and detailed insights — in our upcoming membership.',clubExplore:'Explore membership',playTitle:'Today’s files',playSubtitle:'Four games refresh daily at midnight, Kuwait time.',dailyProgress:'Today’s progress',archiveTitle:'Case archive',archiveDesc:'Past mysteries are waiting in our membership archive.',archivePromoTitle:'Unlock every door',archivePromoDesc:'Explore previous cases and bonus files. The archive is a preview until payments are enabled.',memberPlans:'View plans',statsTitle:'Detective record',statsDesc:'Track progress, keep your streak, and share your results.',statPlayed:'games completed',statStreak:'day streak',statPerfect:'perfect days',statPoints:'total points',dailyReport:'Today’s report',shareResult:'Share my results',privacyHeading:'Your file stays with you.',privacyNote:'This preview saves progress on this device only. Accounts and cross-device sync will be added with our backend.',backToGames:'Back to today’s games',footerTag:'The truth is the game.',prototype:'Preview build',modalTitle:'Be first to unlock the archive.',modalDesc:'Paid membership is not live yet. This is a pricing preview only. No payment or charges are available.',planMonthly:'Monthly',planMonthlyDesc:'Archive + weekly bonus files',planYearly:'Yearly',planYearlyDesc:'Every feature + better value',kwd:'KWD',previewOnly:'Got it — coming soon',noPayments:'Payments and accounts are not enabled; no financial information is collected.',openFile:'Investigate now',openGame:'Play challenge',done:'Completed',new:'New',point:'point',points:'points',playAgainTomorrow:'Well done! A new challenge unlocks tomorrow.',locked:'Members only',viewPlan:'Learn more',archiveDate:'Previous case',archiveNotice:'The archive is locked in this preview until memberships launch.',caseName:'Daily case',caseTag:'INVESTIGATION',caseCardDesc:'Inspect evidence, interview suspects, and name the culprit.',codeName:'The cipher',codeTag:'CODE BREAKER',codeCardDesc:'Crack a four-digit safe code in six guesses.',memoryName:'Witness memory',memoryTag:'MEMORY TEST',memoryCardDesc:'Memorize the scene and answer three questions.',timelineName:'The timeline',timelineTag:'TIMELINE',timelineCardDesc:'Put events in the correct order.',caseBrief:'The case file',evidenceTitle:'Collected evidence',evidenceHint:'Tap clues to read the details. Open at least two clues before your verdict.',suspectTitle:'Suspects',suspectHint:'Review their statements and name the culprit.',verdict:'Submit verdict',pickSuspect:'Select a suspect first.',needEvidence:'Open at least two clues first.',resolution:'Case resolution',right:'Case solved!',wrong:'Not quite right',resultCorrect:'Excellent detective work.',resultWrong:'That was not the culprit. Here’s the truth.',tryOther:'Play another game',evidenceSeen:'Clues inspected',codeInfo:'The code has 4 digits. Correct digit and position appear gold; correct digit in a different spot appears blue.',codeInput:'Enter 4 digits',tryGuess:'Try code',attemptsLeft:'Guesses left',codeWon:'Safe unlocked!',codeLost:'Out of guesses',secretWas:'The correct code was',codeExact:'correct positions',codePartial:'correct, wrong position',invalidCode:'Enter four digits.',memoryReady:'Ready to test your memory?',memoryInstructions:'Six symbols will appear for seven seconds. Memorize their order, then answer three questions.',showScene:'Show the scene',memorize:'Remember these!',memoryQuestion:'Question',nextQuestion:'Next question',finishMemory:'See my result',yourScore:'Your score',memoryFinished:'Memory test complete',timelineInfo:'These events are shuffled. Move them up or down into the right sequence.',submitOrder:'Check order',timelineWon:'Perfect sequence!',timelineLost:'No guesses left',timelineTryAgain:'Not quite. One more attempt.',correctOrder:'Correct order',alreadyDone:'You completed this game today',alreadyDoneDesc:'Return tomorrow for fresh games. Your result is saved.',noCompleted:'No games completed yet. Start your first challenge!',shareCopied:'Results copied. Share with your friends!',shareFailed:'Could not copy. You can share a screenshot instead.',dayLabel:'day',issueLabel:'Edition',daysAgo:'ago',day:'day',timeKuwait:'Kuwait time',nowPlaying:'In progress',score:'Score',facts:'Fictional cases for entertainment, not real events.',memoryThird:'What was the third symbol?',memoryLast:'What was the last symbol?',memoryAbsent:'Which symbol was NOT in the scene?',gameFinished:'Challenge complete!',fromMax:'out of',comeTomorrow:'Come back tomorrow for new challenges.'
+    }
+  },
+  games: [
+    {id:'case',icon:'◈',color:'gold',max:200,tag:'caseTag',name:'caseName',desc:'caseCardDesc',duration:'5–7'},
+    {id:'code',icon:'⌗',color:'blue',max:120,tag:'codeTag',name:'codeName',desc:'codeCardDesc',duration:'2–3'},
+    {id:'memory',icon:'◉',color:'pink',max:100,tag:'memoryTag',name:'memoryName',desc:'memoryCardDesc',duration:'1–2'},
+    {id:'timeline',icon:'≋',color:'green',max:80,tag:'timelineTag',name:'timelineName',desc:'timelineCardDesc',duration:'2–3'}
+  ],
+  codes: ['4312','7052','2896','6401','8253','3719','9582','1407','5926','8063','3174','6295','4708','8146'],
+  symbolSets: [
+    ['🔑','🎩','📻','⌚','💎','🕯️'],
+    ['🧳','🪙','🔦','📷','✉️','🧲'],
+    ['🗝️','🔍','📚','🌹','🎭','⏳'],
+    ['🎻','🧤','🕶️','🧭','🧪','🪞'],
+    ['🧵','🔐','🎲','🛎️','🪶','📜'],
+    ['🎯','🖋️','⛓️','🔔','🧩','🧰'],
+    ['🪑','🧯','📎','💡','📼','⚙️']
+  ],
+  cases: [
+    {
+      id:'seventh-floor', no:'001', visual:'🏨',
+      ar:{title:'الطابق السابع',location:'فندق الريحان — 02:17 فجراً',brief:'اختفى ظرف يحوي مخطوطة نادرة من جناح مغلق. الباب ما انكسر، ولا أحد انشاف وهو يدخل. ثلاثة أشخاص كانوا في الفندق وقت الاختفاء.',evidence:[['سجل البطاقات','سُجّل فتح باب الجناح ببطاقة موظفين احتياطية الساعة 02:06.'],['تقرير الاستقبال','تم إخراج البطاقة الاحتياطية من درج الاستقبال الساعة 02:02.'],['تسجيل الممر','كاميرا الممر تعطّلت من 02:00 إلى 02:12 بسبب فصل يدوي للكهرباء.'],['ورقة المناوبة','مسؤولة الاستقبال كانت الوحيدة المكلّفة بمكتب البطاقات بين 02:00 و02:15.']],suspects:[['نورة','موظفة الاستقبال','ما لمست البطاقات طول الليل، وكنت على مكتبي.'],['سالم','عامل الغرف','وصلت طلبية للجناح الساعة 01:45 وبعدها نزلت.'],['مها','مديرة الفندق','كنت في اجتماع إداري بغرفة ثانية من الساعة 01:30.']],resolution:'نورة أنكرت لمس البطاقات، بينما سجل الخزانة يثبت سحب البطاقة الاحتياطية خلال مناوبتها المنفردة. هي الشخص الوحيد المرتبط بالدخول المسجّل.'},
+      en:{title:'The Seventh Floor',location:'Al Rayhan Hotel — 2:17 a.m.',brief:'An envelope holding a rare manuscript vanished from a locked suite. No forced entry. Three people were on duty during the disappearance.',evidence:[['Keycard log','A staff backup keycard opened the suite at 2:06 a.m.'],['Front-desk register','The spare card was removed from the reception drawer at 2:02 a.m.'],['Hallway camera','The camera lost power from 2:00 to 2:12 a.m. after a manual switch-off.'],['Duty roster','The receptionist was the only person assigned to the keycard desk between 2:00 and 2:15 a.m.']],suspects:[['Noura','Receptionist','I never touched the cards. I stayed at my desk.'],['Salem','Room service','I delivered an order at 1:45 a.m. and went downstairs.'],['Maha','Hotel manager','I was in a management meeting elsewhere from 1:30 a.m.']],resolution:'Noura denied handling the cards, but the log shows that the backup card was removed during her solo shift. She is the only suspect linked to the recorded entry.'},culprit:0
+    },
+    {
+      id:'silent-museum',no:'002',visual:'🏛️',
+      ar:{title:'تمثال بلا ظل',location:'متحف المدينة — 09:20 مساءً',brief:'اختفى تمثال صغير من صندوق عرض محكم الإغلاق في الليلة اللي انطفأ فيها الإنذار سبع دقائق فقط.',evidence:[['نظام الإنذار','تم إيقاف حساس القاعة بكود قسم الترميم الساعة 09:11.'],['دفتر المفاتيح','مفتاح خزانة العرض كان مع مسؤول الترميم لهذا الأسبوع.'],['أثر القفاز','عُثر على جزء من قفاز أزرق يستخدمه قسم الترميم قرب الحامل.'],['جدول الأمن','الحارس كان في البوابة الرئيسية من 09:00 إلى 09:30.']],suspects:[['بدر','مسؤول الترميم','ما دخلت القاعة بعد الساعة 8، ولا استخدمت الكود.'],['فجر','المرشدة','طلعت مع آخر مجموعة زوار قبل الإغلاق.'],['يوسف','الحارس','ما تركت بوابة المتحف وقت الإنذار.']],resolution:'كود الترميم ومفتاح الخزانة والقفاز الأزرق كلها تربط بدر بالمكان، رغم إنه أنكر الدخول بعد الثامنة.'},
+      en:{title:'The Shadowless Statue',location:'City Museum — 9:20 p.m.',brief:'A small statue vanished from a locked display case during a seven-minute alarm outage.',evidence:[['Alarm system','The gallery sensor was disabled with the restoration department’s code at 9:11 p.m.'],['Key register','The display-case key belonged to this week’s restoration lead.'],['Glove fragment','A torn blue restoration glove was found by the pedestal.'],['Security schedule','The guard was posted at the main entrance from 9:00 to 9:30 p.m.']],suspects:[['Bader','Restoration lead','I didn’t enter after 8, and I didn’t use the code.'],['Fajer','Guide','I left with the last visitor group.'],['Yousef','Guard','I never left the entrance during the outage.']],resolution:'The restoration code, display key, and blue glove all connect Bader to the gallery despite his denial.'},culprit:0
+    },
+    {
+      id:'last-broadcast',no:'003',visual:'📻',
+      ar:{title:'البث الأخير',location:'إذاعة الميناء — 11:42 مساءً',brief:'بثّت الإذاعة رسالة سرية على الهواء بدل النشرة الليلية، رغم إن المذيع يقول إنه ما قراها.',evidence:[['سجل التشغيل','ملف الرسالة أُدخل يدوياً لقائمة البث الساعة 11:39.'],['حساب المستخدم','التعديل حصل من حساب المنتجة الفنية.'],['غرفة التسجيل','المذيع كان يسجّل مقابلة في استوديو منفصل بنفس الدقيقة.'],['سجل الدخول','بطاقة المنتجة فتحت غرفة التحكم قبل البث بخمس دقائق.']],suspects:[['مايا','المنتجة الفنية','قائمة البث كانت جاهزة، ما غيّرت فيها شيء.'],['فيصل','المذيع','أنا كنت داخل الاستوديو الثاني طول الوقت.'],['راشد','مهندس الصوت','كنت أصلح سماعة في الممر.']],resolution:'ملف الرسالة أُضيف من حساب مايا، وبطاقتها سجّلت دخول غرفة التحكم قبل البث. كلامها يتعارض مع السجلات.'},
+      en:{title:'The Last Broadcast',location:'Harbor Radio — 11:42 p.m.',brief:'A secret message aired in place of the nightly bulletin. The anchor insists they never read it.',evidence:[['Playback log','The message file was manually queued at 11:39 p.m.'],['Account history','The queue edit came from the producer’s account.'],['Recording booth','The anchor was recording an interview in a separate studio.'],['Access log','The producer’s badge opened the control room five minutes before airtime.']],suspects:[['Maya','Producer','The queue was ready. I changed nothing.'],['Faisal','Anchor','I was in studio two the whole time.'],['Rashed','Sound engineer','I was repairing a speaker in the hall.']],resolution:'The queued message came from Maya’s account, and her badge accessed the control room immediately before the broadcast.'},culprit:0
+    },
+    {
+      id:'container-17',no:'004',visual:'🚢',
+      ar:{title:'حاوية رقم 17',location:'الميناء القديم — 04:10 صباحاً',brief:'وصلت حاوية قيّمة فارغة، مع إن أوراق التحميل تؤكد إنها كانت ممتلئة وقت الإقلاع.',evidence:[['تصريح الخروج','تغيّر وزن الحاوية في النظام الساعة 03:51.'],['سجل الحسابات','آخر تعديل للوزن تم من حساب مشرف الشحن.'],['كاميرا الرصيف','شاحنة صغيرة دخلت رصيف 17 بعد التعديل مباشرة.'],['لوحة الدوام','مشرف الشحن كان موجود في الرصيف خلال ساعة التعديل.']],suspects:[['راشد','مشرف الشحن','أنا ما عدلت وزن الحاوية نهائياً.'],['جاسم','سائق الرافعة','نقلت الحاوية إلى الرصيف قبل الساعة الثالثة.'],['لولوة','موظفة الجمارك','شفت الأوراق الأصلية قبل المناوبة.']],resolution:'التعديل الحاسم تم من حساب راشد أثناء وجوده في الرصيف، وهو أنكر أي تغيير. بذلك يرتبط بإخفاء الحمولة.'},
+      en:{title:'Container 17',location:'Old Harbor — 4:10 a.m.',brief:'A high-value container arrived empty, although the original loading papers recorded it as full.',evidence:[['Exit permit','The container’s weight was altered at 3:51 a.m.'],['Account history','The latest edit came from the shipping supervisor’s account.'],['Dock camera','A small truck entered dock 17 right after the edit.'],['Shift schedule','The shipping supervisor was working on the dock when the weight changed.']],suspects:[['Rashed','Shipping supervisor','I never changed the container’s weight.'],['Jassem','Crane driver','I moved it to the dock before 3 a.m.'],['Lulwa','Customs officer','I reviewed the original papers before my shift.']],resolution:'Rashed’s account changed the weight while he was at the dock, directly contradicting his statement.'},culprit:0
+    },
+    {
+      id:'stopped-clock',no:'005',visual:'🕰️',
+      ar:{title:'الساعة المتوقفة',location:'مقهى الزاوية — 06:05 صباحاً',brief:'اختفى صندوق تبرعات من المقهى قبل فتحه، والساعة الكبيرة فوق الباب واقفة على وقت مو منطقي.',evidence:[['سجل الكهرباء','الكهرباء كانت شغالة بشكل طبيعي طول الليل.'],['وقت الساعة','الساعة اليدوية توقفت عند 05:47 بعد تعديل عقاربها.'],['كاميرا الصندوق','انحذفت عشر دقائق من تسجيل الكاميرا من حساب مديرة الوردية.'],['سجل الحضور','مديرة الوردية دخلت قبل الموظفين بربع ساعة.']],suspects:[['لينا','مديرة الوردية','الكاميرا تعطّلت بروحها، وأنا ما قربت من الصندوق.'],['ناصر','الباريستا','وصلت الساعة السادسة مثل كل يوم.'],['سارة','المحاسبة','كنت آخذ الطلبات خارج المقهى.']],resolution:'لينا كانت موجودة وحدها قبل الدوام، والتسجيل انحذف من حسابها؛ تعطل الكاميرا المزعوم ما تدعمه الأدلة.'},
+      en:{title:'The Stopped Clock',location:'Corner Café — 6:05 a.m.',brief:'The donation box disappeared before opening. A large clock above the entrance was showing a strange time.',evidence:[['Power records','The electricity was uninterrupted all night.'],['Wall clock','Someone manually moved the hands to 5:47 a.m.'],['Register camera','Ten minutes of footage were deleted through the shift manager’s account.'],['Attendance','The shift manager arrived fifteen minutes before everyone else.']],suspects:[['Lina','Shift manager','The camera failed on its own. I never touched the box.'],['Nasser','Barista','I arrived at six as always.'],['Sara','Cashier','I was collecting orders outside.']],resolution:'Lina arrived alone before opening and deleted footage using her account; the supposed spontaneous camera failure is unsupported.'},culprit:0
+    },
+    {
+      id:'reversed-painting',no:'006',visual:'🖼️',
+      ar:{title:'اللوحة المعكوسة',location:'معرض الخط — 08:30 مساءً',brief:'استبدلت لوحة أصلية بنسخة دقيقة قبل المزاد، وما انتبه أحد إلا لما لاحظوا توقيعاً معكوساً.',evidence:[['إشعار الطابعة','طُبعت نسخة كبيرة في ورشة الترميم الساعة 07:50.'],['كرت المخزن','بطاقة مسؤول الورشة فتحت غرفة اللوحات مرتين.'],['علامة الإطار','برغي من الإطار الأصلي وُجد على طاولة الورشة.'],['سجل المزاد','اللوحة ظلت معروضة حتى الساعة الثامنة.']],suspects:[['فهد','مسؤول الورشة','ما طبعت ولا بدلت أي لوحة اليوم.'],['دانة','منسقة المزاد','كنت أرتب قائمة الضيوف في القاعة.'],['عادل','الجامع','دخلت أشوف اللوحة لكن ما لمستها.']],resolution:'سجل الطباعة والدخول وبرغي الإطار يربطون فهد بعملية الاستبدال، بعكس إفادته.'},
+      en:{title:'The Reversed Painting',location:'Calligraphy Gallery — 8:30 p.m.',brief:'A painting was swapped for a near-perfect copy before an auction. The forgery was noticed only when its signature appeared reversed.',evidence:[['Printer notice','A large replica was printed in the restoration workshop at 7:50 p.m.'],['Storage card','The workshop lead’s card opened the painting room twice.'],['Frame mark','A screw from the original frame was found on the workshop table.'],['Auction log','The painting remained on display until eight.']],suspects:[['Fahad','Workshop lead','I didn’t print or switch any painting today.'],['Dana','Auction coordinator','I was organizing the guest list.'],['Adel','Collector','I looked at the painting but didn’t touch it.']],resolution:'Printing history, access records, and a frame screw all connect Fahad to the switch despite his denial.'},culprit:0
+    },
+    {
+      id:'missing-book',no:'007',visual:'📚',
+      ar:{title:'الكتاب الذي لم يُستعر',location:'المكتبة الوطنية — 05:15 مساءً',brief:'اختفت الطبعة الأولى من كتاب نادر، بينما نظام الإعارة يقول إن الكتاب ما طلع من المكتبة.',evidence:[['سجل الخزنة','فتحت خزنة الكتب النادرة الساعة 04:48.'],['بطاقة الموظفين','الفتح تم ببطاقة أمينة الأرشيف.'],['فحص الأبواب','ما صدر أي تنبيه سرقة على بوابات الخروج.'],['صندوق النقل','شوهد صندوق داخلي مختوم في مكتب الأرشيف قبل نهاية الدوام.']],suspects:[['نوف','أمينة الأرشيف','ما فتحت الخزنة ولا لمست الكتاب اليوم.'],['حمد','طالب باحث','استخدمت غرفة القراءة فقط.'],['بشاير','موظفة الاستقبال','كنت أرتب البطاقات خارج الأرشيف.']],resolution:'الخزنة فُتحت ببطاقة نوف في الوقت المذكور، والصندوق مرّ عبر مكتبها؛ تصريحها يناقض سجل الفتح.'},
+      en:{title:'The Book Never Borrowed',location:'National Library — 5:15 p.m.',brief:'A first edition of a rare book vanished, but the lending system shows it never left the library.',evidence:[['Vault log','The rare-book vault was opened at 4:48 p.m.'],['Staff badge','The archivist’s card was used to open the vault.'],['Exit sensors','No theft alarm sounded at the exit gates.'],['Transport crate','A sealed internal box was spotted at the archive office before closing.']],suspects:[['Nouf','Archivist','I didn’t open the vault or touch the book.'],['Hamad','Research student','I only used the reading room.'],['Bashayir','Receptionist','I was filing cards outside the archives.']],resolution:'Nouf’s card opened the vault and the sealed crate passed through her office; her denial contradicts the access log.'},culprit:0
+    }
+,
+    {"id": "locked-room", "no": "008", "visual": "🔒", "ar": {"title": "الغرفة 307", "location": "فندق الميناء — 09:30 مساءً", "brief": "أبلغت نزيلـة عن اختفاء مجوهرات من غرفة لم يدخلها أحد. الكاميرات تؤكد أن الباب ظل مغلقاً منذ المساء.", "evidence": [["سجل البطاقة", "آخر فتح للباب كان ببطاقة صاحبة الغرفة، ولم يُفتح بعده."], ["الكاميرات", "لم يقترب أحد من الباب بين الثامنة والعاشرة."], ["بوليصة التأمين", "فُعّل تأمين جديد على المجوهرات قبل البلاغ بنصف ساعة."], ["فحص الحقيبة", "بطانة حقيبة النـزيلة مخيطة من جديد وبها تجويف سري."]], "suspects": [["سلوى", "صاحبة الغرفة", "أحدهم دخل وسرق المجوهرات وأنا في الغرفة."], ["راشد", "مدير الفندق", "لم أدخل جناحها طوال المساء."], ["جاسم", "موظف الاستقبال", "بقيت في الردهة ولم أقترب من جناحها."]], "resolution": "سلوى أخفت المجوهرات في بطانة الحقيبة ثم بلّغت عن سرقة وهمية بعد تفعيل التأمين، ولم تكن هناك حركة على الباب."}, "en": {"title": "Room 307", "location": "Harbor Hotel — 9:30 p.m.", "brief": "A guest reports stolen jewels from a room nobody entered. Hallway footage confirms the door stayed closed all evening.", "evidence": [["Keycard log", "Only the guest’s card opened the door that evening."], ["Cameras", "Nobody approached the door from eight to ten."], ["Insurance record", "The jewels were newly insured 30 minutes before the report."], ["Suitcase lining", "A hidden compartment was recently sewn into the guest’s case."]], "suspects": [["Salwa", "The guest", "Someone entered my room and stole the jewels."], ["Rashed", "Hotel manager", "I never entered her suite."], ["Jassem", "Receptionist", "I stayed at reception."]], "resolution": "Salwa concealed the jewels in her luggage and invented a burglary after buying insurance. Nobody entered the room."}, "culprit": 0},
+    {"id": "sealed-north-door", "no": "009", "visual": "🚪", "ar": {"title": "الباب الشمالي", "location": "مستودع الشحن — 04:50 فجراً", "brief": "اختفت شحنة من المستودع. أحد العاملين يقول إنه شاهد شخصاً يخرج بالشحنة من الباب الشمالي.", "evidence": [["ختم البلدية", "الباب الشمالي مختوم رسمياً منذ ثلاثة أيام."], ["فحص المكان", "الختم كان سليماً ولم ينكسر."], ["أقوال الشاهد", "يؤكد أنه رأى شخصاً يفتح الباب المختوم."], ["كاميرا الجنوب", "رصدت حركة قرب البوابة الجنوبية فقط."]], "suspects": [["خالد", "السائق", "شفت العامل يفتح الباب الشمالي ويطلع بالشحنة."], ["منى", "المشرفة", "وصلت بعد طلوع الشمس."], ["فهد", "حارس البوابة", "كنت في نقطة الحراسة الجنوبية."]], "resolution": "شهادة خالد مستحيلة لأن الختم السليم يؤكد أن الباب لم يُفتح. روايته ملفقة."}, "en": {"title": "The North Door", "location": "Shipping warehouse — 4:50 a.m.", "brief": "A shipment vanished. A driver insists he saw someone carrying it through the northern door.", "evidence": [["Municipal seal", "The north door has been officially sealed for three days."], ["Inspection", "The seal is intact."], ["Witness report", "The driver says the sealed door opened."], ["South camera", "Only the south entrance shows movement."]], "suspects": [["Khaled", "Driver", "I watched them open the north door and leave with the goods."], ["Mona", "Supervisor", "I arrived after sunrise."], ["Fahad", "Guard", "I stayed at the southern checkpoint."]], "resolution": "Khaled’s account is impossible: the north-door seal was never broken."}, "culprit": 0},
+    {"id": "seat-b12", "no": "010", "visual": "🎭", "ar": {"title": "المقعد B12", "location": "المسرح القديم — 08:00 مساءً", "brief": "اختفت ساعة ثمينة من الكواليس. يدّعي أحد الضيوف أنه كان جالساً في المقعد B12 طوال العرض.", "evidence": [["قائمة التذاكر", "المقعد B12 لم يُعرض للبيع بسبب عمود يحجب الرؤية."], ["سجل الدخول", "لا توجد تذكرة تم مسحها للمقعد B12."], ["الكواليس", "شوهد الضيف قرب باب الكواليس أثناء الاستراحة."], ["كشف المقاعد", "بقي B12 خالياً طول العرض."]], "suspects": [["ماهر", "أحد الضيوف", "جلست في B12 وشفت العرض كله."], ["نور", "الممثلة", "كنت على المسرح وقت الحادث."], ["عادل", "موظف التذاكر", "ما بعت تذكرة للمقعد B12."]], "resolution": "ماهر ادعى الجلوس في مقعد غير متاح للبيع، وشوهد قرب الكواليس في وقت اختفاء الساعة."}, "en": {"title": "Seat B12", "location": "Old Theatre — 8:00 p.m.", "brief": "A valuable watch disappears backstage. A guest claims to have watched the entire show from seat B12.", "evidence": [["Ticket plan", "Seat B12 was blocked from sale due to an obstructing pillar."], ["Scan log", "No B12 ticket was scanned."], ["Backstage door", "The guest was spotted near backstage during the break."], ["Seat report", "B12 remained empty all night."]], "suspects": [["Maher", "Guest", "I sat in B12 the whole show."], ["Noor", "Actor", "I was on stage."], ["Adel", "Ticket clerk", "We never sold B12."]], "resolution": "Maher lied about sitting in a seat that could not be sold and was seen backstage."}, "culprit": 0},
+    {"id": "wet-umbrella", "no": "011", "visual": "☂️", "ar": {"title": "المظلة المبللة", "location": "محطة القطار — 10:00 مساءً", "brief": "اختفى ظرف من مكتب المحطة. قال مشتبه إنه جاء هارباً من المطر ومظلته تقطر ماء.", "evidence": [["الرصد الجوي", "توقف المطر الساعة الخامسة عصراً."], ["وقت الوصول", "المشتبه يقول إنه وصل العاشرة ليلاً."], ["أرض المكتب", "الأرض جافة تماماً ولا توجد آثار قطرات ماء."], ["نافذة المكتب", "يستطيع البائع رؤية درج المكتب من كشكه."]], "suspects": [["مروان", "بائع الكشك", "دخلت الساعة 10 والمطر يغرق مظلتي."], ["هدى", "موظفة المحطة", "انتهى دوامي الساعة 9."], ["ماجد", "الحارس", "كنت أتفقد الأرصفة."]], "resolution": "مروان اخترع سبب دخوله؛ المطر انتهى قبل وصوله بخمس ساعات، ولا أثر لماء المظلة."}, "en": {"title": "The Wet Umbrella", "location": "Rail station — 10:00 p.m.", "brief": "An envelope is missing. A suspect claims he came inside because his umbrella was dripping rainwater.", "evidence": [["Weather report", "Rain ended at five in the afternoon."], ["Arrival time", "The suspect arrived at ten at night."], ["Office floor", "The floor is dry, with no water marks."], ["Office window", "The kiosk owner can see the desk drawer."]], "suspects": [["Marwan", "Kiosk owner", "I came in at ten with a rain-soaked umbrella."], ["Huda", "Clerk", "My shift ended at nine."], ["Majed", "Guard", "I patrolled the platforms."]], "resolution": "Marwan invented the wet-umbrella story: rain stopped five hours earlier."}, "culprit": 0},
+    {"id": "silent-lighthouse", "no": "012", "visual": "🌊", "ar": {"title": "المنارة الصامتة", "location": "جزيرة السلاحف — بعد منتصف الليل", "brief": "اقترب قارب من جزيرة محظورة. قال الصياد إنه اهتدى إلى الجزيرة باتباع ومضات المنارة.", "evidence": [["سجل الكهرباء", "انقطعت الكهرباء عن المنارة من السابعة مساءً إلى الفجر."], ["المولد", "لم يعمل المولد الاحتياطي ليلة الحادث."], ["رصد القارب", "القارب اقترب من الجزيرة الساعة 12:30."], ["شهادة الصياد", "أكد أنه شاهد ومضات المنارة عند منتصف الليل."]], "suspects": [["غازي", "الصياد", "تبعت ضوء المنارة لين وصلت للجزيرة."], ["سعود", "الحارس", "كنت على الشاطئ الرئيسي."], ["منى", "عاملة المنارة", "ما أصلحت الإنارة تلك الليلة."]], "resolution": "غازي كذب؛ لم تكن المنارة تعمل بأي مصدر طاقة في الوقت الذي زعم أنه تبع ضوءها فيه."}, "en": {"title": "Silent Lighthouse", "location": "Turtle Island — after midnight", "brief": "A boat nears a restricted island. The fisherman says the lighthouse flashes guided him there.", "evidence": [["Power records", "The lighthouse had no electricity from 7 p.m. until dawn."], ["Generator log", "The backup generator never ran."], ["Boat tracking", "The boat reached the island at 12:30 a.m."], ["Testimony", "The fisherman claims he followed the light after midnight."]], "suspects": [["Ghazi", "Fisherman", "I followed the lighthouse flashes to the island."], ["Saud", "Guard", "I was on the mainland."], ["Mona", "Technician", "I never fixed the beacon that night."]], "resolution": "Ghazi’s excuse is false because the lighthouse had no source of power."}, "culprit": 0},
+    {"id": "private-margins", "no": "013", "visual": "📜", "ar": {"title": "هامش الرسالة", "location": "مكتبة المخطوطات — 05:00 مساءً", "brief": "اختفت صفحة من مخطوطة قديمة. قال باحث إنه لم يفتح الكتاب، لكنه وصف كلمات صغيرة في هامش الصفحة.", "evidence": [["فهرس المكتبة", "هامش الصفحة المفقودة لم يُصوّر أو يُنشر."], ["زجاج العرض", "لا يمكن قراءة الهامش إذا بقي الكتاب مغلقاً."], ["شهادة الباحث", "ذكر كلمات دقيقة من الهامش غير المعلن."], ["سجل الزيارة", "الباحث دخل القاعة قبل اكتشاف الاختفاء."]], "suspects": [["راكان", "باحث زائر", "عرفت النص من قبل لكن ما فتحت الكتاب."], ["شهد", "أمينة المكتبة", "ما سمعت أحد يفتح الخزانة."], ["ناصر", "الفني", "كنت عند أجهزة التكييف."]], "resolution": "راكان عرف نصاً لا يمكن مشاهدته من خارج الكتاب ولم يُنشر؛ هذا يدل على الاطلاع المباشر على الصفحة."}, "en": {"title": "The Hidden Margin", "location": "Manuscript Library — 5:00 p.m.", "brief": "A page vanishes from an old manuscript. A researcher claims he never opened it, yet quotes tiny words from the missing margin.", "evidence": [["Library catalog", "The margin was never photographed or published."], ["Display glass", "The margin is invisible with the book closed."], ["Witness statement", "The researcher quotes exact unpublished wording."], ["Visitor log", "He entered before the disappearance was noticed."]], "suspects": [["Rakan", "Researcher", "I already knew the text; I never opened the book."], ["Shahad", "Archivist", "I heard no cabinet open."], ["Nasser", "Technician", "I was servicing the air conditioning."]], "resolution": "Rakan knew unpublished words that could not be read with the book closed."}, "culprit": 0},
+    {"id": "east-window", "no": "014", "visual": "📸", "ar": {"title": "ظلّ النافذة", "location": "قاعة التصوير — 12:15 ظهراً", "brief": "نُشرت صورة لقطعة أثرية بعد فقدانها. ادعى مصور أنه التقطها ظهراً على ضوء النافذة الشرقية.", "evidence": [["جهة النافذة", "النافذة الشرقية يصلها الضوء المباشر في الصباح."], ["ظل القطعة", "اتجاه الظل في الصورة يطابق ضوء الصباح."], ["بيانات الملف", "حُذفت بيانات وقت التصوير من الصورة."], ["سجل الحضور", "المصور دخل القاعة الساعة الثامنة والنصف صباحاً."]], "suspects": [["بشار", "مصور محترف", "التقطت الصورة الساعة 12:15."], ["نجلاء", "مديرة المعرض", "كنت أتفقد القاعة عصراً."], ["حمد", "الحارس", "ما لمست الكاميرا."]], "resolution": "بشار غيّر وقت الصورة؛ اتجاه الشمس والظل يثبت أنها أُخذت صباحاً وليس ظهراً."}, "en": {"title": "The East Window", "location": "Photo Gallery — 12:15 p.m.", "brief": "A photographer claims an artifact photo was shot at noon with sunlight through the east-facing window.", "evidence": [["Window orientation", "Direct light reaches the east window in the morning."], ["Artifact shadow", "The shadow angle matches morning sun."], ["File metadata", "The photo timestamp was removed."], ["Attendance", "The photographer entered at 8:30 a.m."]], "suspects": [["Bashar", "Photographer", "I took the photo at 12:15 p.m."], ["Najla", "Gallery manager", "I visited in the afternoon."], ["Hamad", "Guard", "I never touched the camera."]], "resolution": "Bashar falsified the photo time: the light angle proves the image was taken in the morning."}, "culprit": 0}
+  ],
+  timelines: [
+    {ar:['انقطاع الكاميرا الساعة 02:00','سحب البطاقة الاحتياطية 02:02','فتح الجناح الساعة 02:06','رجوع الكاميرا الساعة 02:12'],en:['Camera goes offline at 2:00','Spare card taken at 2:02','Suite opened at 2:06','Camera restored at 2:12']},
+    {ar:['آخر الزوار يغادرون','تعطيل حساس القاعة','فتح خزانة العرض','اكتشاف اختفاء التمثال'],en:['Final visitors depart','Gallery sensor disabled','Display case opened','Missing statue discovered']},
+    {ar:['دخول غرفة التحكم','تعديل قائمة البث','بث الرسالة الغامضة','فتح تحقيق داخلي'],en:['Control room accessed','Broadcast queue changed','Mysterious message airs','Internal inquiry begins']},
+    {ar:['نقل الحاوية للرصيف','تعديل سجل الوزن','دخول الشاحنة للرصيف','اكتشاف الحاوية الفارغة'],en:['Container moved to dock','Weight log changed','Truck enters the dock','Empty container discovered']},
+    {ar:['وصول مديرة الوردية','تعديل ساعة المقهى','حذف تسجيل الكاميرا','اكتشاف فقدان الصندوق'],en:['Shift manager arrives','Café clock is adjusted','Camera footage deleted','Donation box found missing']},
+    {ar:['طباعة نسخة من اللوحة','فتح غرفة اللوحات','تبديل الإطار الأصلي','اكتشاف التوقيع المعكوس'],en:['Replica is printed','Painting room unlocked','Original frame is changed','Reversed signature spotted']},
+    {ar:['فتح خزنة الكتب','نقل صندوق إلى مكتب الأرشيف','إغلاق غرفة القراءة','اكتشاف اختفاء الكتاب'],en:['Rare-book vault opened','Crate moved to archive office','Reading room closes','Book reported missing']},
+    {"ar": ["أُدخلت المجوهرات في بطانة الحقيبة", "بدأت بوليصة التأمين", "قُدّم بلاغ السرقة الوهمي", "فتّش المحققون الغرفة"], "en": ["Jewels hidden in suitcase lining", "Insurance cover begins", "False theft report filed", "Detectives search the room"]},
+    {"ar": ["أُغلق الباب الشمالي بالختم", "اختفت الشحنة", "تقدّم السائق بالشهادة", "فُحص ختم الباب"], "en": ["North door officially sealed", "Shipment disappears", "Driver gives statement", "Door seal inspected"]},
+    {"ar": ["أُلغي المقعد B12 من البيع", "بدأ العرض المسرحي", "شوهد ماهر قرب الكواليس", "اكتُشف اختفاء الساعة"], "en": ["B12 blocked from sale", "Theatre performance begins", "Maher seen backstage", "Missing watch discovered"]},
+    {"ar": ["انتهى هطول المطر", "فُقد الظرف من المكتب", "دخل مروان المحطة", "راجع المحققون الرصد الجوي"], "en": ["Rain stops", "Envelope goes missing", "Marwan enters station", "Detectives check weather"]},
+    {"ar": ["انقطعت الكهرباء عن المنارة", "اقترب القارب من الجزيرة", "أدلى الصياد بشهادته", "فُحص سجل المولد"], "en": ["Power fails at lighthouse", "Boat nears island", "Fisherman gives testimony", "Generator records reviewed"]},
+    {"ar": ["دخل الباحث المكتبة", "اختفت صفحة المخطوطة", "ذكر الباحث كلمات الهامش", "تبيّن أن الهامش لم يُنشر"], "en": ["Researcher enters library", "Manuscript page disappears", "Researcher quotes margin", "Unpublished text confirmed"]},
+    {"ar": ["دخل المصور القاعة صباحاً", "التُقطت الصورة", "حُذفت بيانات وقت التصوير", "قارن المحققون اتجاه الظل"], "en": ["Photographer enters in morning", "Photo is taken", "Photo timestamp removed", "Detectives compare shadow angles"]}
+  ]
+};
+
+  </script>
+  <script>
+/* BLACK FILE — fully interactive, offline-first preview. No payments or real accounts. */
+(() => {
+  'use strict';
+  const DATA = window.BLACKFILE_DATA;
+  const STORE_KEY = 'blackfile_progress_v1';
+  const $ = (s, root=document) => root.querySelector(s);
+  const $$ = (s, root=document) => [...root.querySelectorAll(s)];
+  const html = str => String(str ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const pad = num => String(num).padStart(2,'0');
+  const dateNowKuwait = () => {
+    const parts = new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Kuwait',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+    const p = Object.fromEntries(parts.map(x => [x.type,x.value]));
+    return `${p.year}-${p.month}-${p.day}`;
+  };
+  const indexForDate = date => Math.max(0, Math.floor((Date.parse(date+'T00:00:00Z')-Date.parse('2026-10-18T00:00:00Z'))/86400000));
+  const dateFromIndex = index => new Date(Date.parse('2026-10-18T00:00:00Z') + index*86400000).toISOString().slice(0,10);
+  const today = dateNowKuwait();
+  const edition = indexForDate(today);
+  const dailyCase = DATA.cases[edition % DATA.cases.length];
+  const safeRead = () => {try { const r = JSON.parse(localStorage.getItem(STORE_KEY)); return r && typeof r === 'object' ? r : {days:{},lang:'ar'};} catch{return {days:{},lang:'ar'};}};
+  let saved = safeRead();
+  if (!saved.days || typeof saved.days !== 'object') saved.days = {};
+  let lang = saved.lang === 'en' ? 'en' : 'ar';
+  let currentView = 'home';
+  let currentGame = null;
+  let timer = null;
+  let caseState = null;
+  let codeGuesses = [];
+  let memoryState = null;
+  let timelineState = null;
+  const t = key => DATA.translations[lang][key] ?? key;
+  const getDay = (date=today) => saved.days[date] || {};
+  const outcome = key => getDay()[key];
+  const scoreToday = () => Object.values(getDay()).reduce((s,v)=> s + (Number(v && v.score) || 0),0);
+  const countToday = () => DATA.games.filter(g=>Boolean(outcome(g.id))).length;
+  const readableDate = (s=today) => new Intl.DateTimeFormat(lang === 'ar' ? 'ar-KW-u-ca-gregory' : 'en-US',{year:'numeric',month:'long',day:'numeric', timeZone:'UTC'}).format(new Date(s+'T12:00:00Z'));
+  const num = n => new Intl.NumberFormat(lang==='ar'?'ar-KW':'en-US').format(n);
+  const readLocal = obj => obj[lang];
+  const game = id => DATA.games.find(x=>x.id===id);
+  function persist(){ try { localStorage.setItem(STORE_KEY,JSON.stringify(saved)); }catch(e){ console.warn('Local storage unavailable',e); }}
+  function track(id,result){
+    if (outcome(id)) return;
+    saved.days[today] = saved.days[today] || {};
+    saved.days[today][id] = { score:result.score, success:Boolean(result.success), result:result.result || '', finished:Date.now() };
+    persist();
+    paintProgress();
+  }
+  function showToast(message){const el=$('#toast'); el.textContent=message; el.classList.add('shown');clearTimeout(showToast.timeout);showToast.timeout=setTimeout(()=>el.classList.remove('shown'),3200);}
+  function clearGameTimer(){if(timer){clearInterval(timer);clearTimeout(timer);timer=null;}}
+  function translateStatic(){
+    document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+    $$('[data-i18n]').forEach(el => {const key=el.dataset.i18n;if(DATA.translations[lang][key]) el.textContent=t(key);});
+    $('#languageBtn').textContent = lang==='ar'?'EN':'عربي';
+    $('#editionDate').textContent=readableDate();
+    $('#editionNo').textContent=`${t('issueLabel')} #${pad(edition+1)}`;
+    $('#folderFileId').textContent=pad((edition % DATA.cases.length)+1);
+    $('#gamesDate').textContent=readableDate();
+    $('#footerYear').textContent=new Date().getFullYear();
+    document.title=(lang==='ar'?'الملف الأسود':'BLACK FILE')+' · BLACK FILE';
+  }
+  function card(g){
+    const done=outcome(g.id);
+    return `<article class="game-card card-${g.color}" data-game-card="${g.id}">
+        <div class="card-top"><span class="card-index">${g.tag==='caseTag'?'01':g.id==='code'?'02':g.id==='memory'?'03':'04'} / 04</span><span class="game-state ${done?'is-done':''}">${done?'✓ '+t('done'):t('new')+' ✦'}</span></div>
+        <div class="card-emblem">${g.icon}</div>
+        <div class="card-category">${t(g.tag)}</div><h3>${t(g.name)}</h3><p>${t(g.desc)}</p>
+        <div class="card-footer"><span>⏱ ${g.duration} ${lang==='ar'?'دقائق':'min'}</span><button aria-label="${html(t(done?'done':'openGame'))}: ${html(t(g.name))}" data-launch="${g.id}" class="card-go">${done?'✓':'↗'}</button></div>
+      </article>`;
+  }
+  function paintGames(){
+    $('#homeGames').innerHTML=DATA.games.map(card).join('');
+    $('#allGameCards').innerHTML=DATA.games.map(card).join('');
+  }
+  function paintProgress(){
+    const completed=countToday();
+    $('#dailyCounter').textContent=`${num(completed)} / ${num(4)}`;
+    $('#dailyScore').textContent=`${num(scoreToday())} / ${num(500)}`;
+    $('#dailyProgressBar').style.width=(completed/4*100)+'%';
+    paintGames();
+  }
+  function paintArchive(){
+    const rows=[];
+    for (let ago=1;ago<=8;ago++){
+      const dayIdx=edition-ago;
+      if(dayIdx<0)break;
+      const date=dateFromIndex(dayIdx);
+      const c=DATA.cases[dayIdx%DATA.cases.length];
+      rows.push(`<article class="archive-row"><div class="archive-file-icon">${c.visual}</div><div class="archive-row-copy"><span>${html(readableDate(date))} · ${t('archiveDate')}</span><strong>${html(readLocal(c)["title"])}</strong></div><div class="archive-lock">⌑ <span>${t('locked')}</span></div><button class="archive-go" data-open-premium aria-label="${html(t('viewPlan'))}">↗</button></article>`);
+    }
+    // Offer a preview of members-only bonus cases even before the first daily archive entry exists.
+    DATA.cases.slice(1,7).forEach(c=>{
+      rows.push(`<article class="archive-row"><div class="archive-file-icon">${c.visual}</div><div class="archive-row-copy"><span>${lang==='ar'?'ملف إضافي · مكتبة المشتركين':'Bonus file · Members library'}</span><strong>${html(readLocal(c).title)}</strong></div><div class="archive-lock">⌑ <span>${t('locked')}</span></div><button class="archive-go" data-open-premium aria-label="${html(t('viewPlan'))}">↗</button></article>`);
+    });
+
+    $('#archiveList').innerHTML=rows.join('');
+  }
+  function streak(){
+    const dates=Object.keys(saved.days).filter(date=>DATA.games.some(g=>saved.days[date]?.[g.id])).sort();
+    if(!dates.length)return 0;
+    const prev=new Date(Date.parse(today+'T00:00:00Z')-86400000).toISOString().slice(0,10);
+    if(!dates.includes(today)&&!dates.includes(prev))return 0;
+    let date=dates.includes(today)?today:prev;
+    let n=0;
+    while(dates.includes(date)) {n++;date=new Date(Date.parse(date+'T00:00:00Z')-86400000).toISOString().slice(0,10);}
+    return n;
+  }
+  function paintStats(){
+    const records=Object.values(saved.days);
+    $('#statPlayed').textContent=num(records.reduce((n,row)=>n+DATA.games.filter(g=>row[g.id]).length,0));
+    $('#statStreak').textContent=num(streak());
+    $('#statPerfect').textContent=num(records.filter(row=>DATA.games.every(g=>row[g.id])).length);
+    $('#statPoints').textContent=num(records.reduce((n,row)=>n+Object.values(row).reduce((a,r)=>a+(Number(r?.score)||0),0),0));
+    $('#recordLines').innerHTML=DATA.games.map(g=>`<div class="record-row"><span><i class="record-symbol">${g.icon}</i>${t(g.name)}</span><strong>${outcome(g.id)?num(outcome(g.id).score)+' / '+num(g.max):'—'}</strong></div>`).join('');
+  }
+  function go(view){
+    clearGameTimer();
+    currentView=view;
+    $$('.view').forEach(el=>el.classList.add('hidden'));
+    const el=$('#'+view+'View');
+    if(el)el.classList.remove('hidden');
+    $$('.nav-item,.mobile-nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===view));
+    if(view==='archive')paintArchive();
+    if(view==='stats')paintStats();
+    if(view==='games')paintProgress();
+    scrollTo({top:0,behavior:'instant'});
+  }
+  function showPremium(){ $('#premiumModal').classList.remove('hidden'); $('#closeModal').focus(); }
+  function hidePremium(){ $('#premiumModal').classList.add('hidden'); }
+  function decoratePlay(id){
+    const g=game(id);
+    $('#playTitle').textContent=t(g.name);
+    $('#playEyebrow').textContent=t(g.tag);
+    $('#playDescription').textContent=t(g.desc);
+    $('#playStatus').textContent=outcome(id)?'✓ '+t('done'):`${t('score')}: ${num(g.max)}`;
+  }
+  function launch(id){
+    if(!game(id))return;
+    currentGame=id;
+    go('play');decoratePlay(id);
+    if(outcome(id)){renderCompleted(id);return;}
+    if(id==='case')startCase();
+    if(id==='code')startCode();
+    if(id==='memory')startMemory();
+    if(id==='timeline')startTimeline();
+  }
+  function resultView({id,won,score,summary,details,emoji}){
+    track(id,{score,success:won,result:details||summary});
+    decoratePlay(id);
+    $('#gameStage').innerHTML=`<div class="end-card"><div class="end-symbol">${emoji|| (won?'✦':'◇')}</div><span class="section-eyebrow">CASE CLOSED / ${html(t('gameFinished'))}</span><h2>${html(summary)}</h2><div class="end-score"><b>${num(score)}</b><span>/ ${num(game(id).max)} ${t('points')}</span></div>${details?`<p class="end-detail">${html(details)}</p>`:''}<div class="end-actions"><button class="button button-primary" data-view="games">${t('tryOther')} ↗</button><button class="button button-outline" data-view="stats">${t('statsTitle')}</button></div><p class="end-footnote">${t('comeTomorrow')}</p></div>`;
+  }
+  function renderCompleted(id){
+    const result=outcome(id);
+    $('#gameStage').innerHTML=`<div class="end-card"><div class="end-symbol">✓</div><span class="section-eyebrow">DAILY CASE CLOSED</span><h2>${t('alreadyDone')}</h2><p>${t('alreadyDoneDesc')}</p><div class="end-score"><b>${num(result.score)}</b><span>/ ${num(game(id).max)} ${t('points')}</span></div><div class="end-actions"><button class="button button-primary" data-view="games">${t('tryOther')} ↗</button><button class="button button-outline" data-view="stats">${t('statsTitle')}</button></div></div>`;
+  }
+  const shuffled = (arr,seed) => {
+    const a=[...arr]; let r=(seed>>>0)||1;
+    for(let i=a.length-1;i>0;i--){r=(Math.imul(r,1664525)+1013904223)>>>0;const j=r%(i+1);[a[i],a[j]]=[a[j],a[i]];}
+    return a;
+  };
+  function startCase(){
+    const story=readLocal(dailyCase);
+    caseState={opened:new Set(),selected:null,suspects:shuffled(story.suspects.map((s,i)=>({data:s,original:i})),edition+7)};
+    const scene=$('#gameStage');
+    scene.innerHTML=`<div class="case-banner"><div class="case-banner-icon">${dailyCase.visual}</div><div><span class="section-eyebrow">${t('caseTag')} / FILE ${dailyCase.no}</span><h2>${html(story.title)}</h2><p>${html(story.location)}</p></div><div class="case-watermark">${dailyCase.no}</div></div>
+       <div class="case-brief"><span class="small-label">${t('caseBrief')}</span><p>${html(story.brief)}</p></div>
+       <div class="case-heading"><h3>${t('evidenceTitle')} <span>✧</span></h3><small>${t('evidenceSeen')}: <b id="seenCount">0</b> / ${story.evidence.length}</small></div><p class="helper-copy">${t('evidenceHint')}</p>
+       <div class="evidence-grid">${story.evidence.map((c,i)=>`<button class="evidence-card" data-clue="${i}"><span class="evidence-num">${pad(i+1)} / EVIDENCE</span><span class="clue-icon">${['⌕','⌁','◉','▦'][i]}</span><strong>${html(c[0])}</strong><small>+ ${lang==='ar'?'افتح الدليل':'Open evidence'}</small></button>`).join('')}</div>
+       <div id="clueDetail" class="clue-detail hidden"></div>
+       <div class="case-heading suspect-heading"><h3>${t('suspectTitle')} <span>✧</span></h3></div><p class="helper-copy">${t('suspectHint')}</p>
+       <div class="suspects-list">${caseState.suspects.map((p,i)=>`<button class="suspect" data-suspect="${i}"><div class="suspect-avatar">${html(p.data[0].slice(0,1))}</div><div class="suspect-copy"><strong>${html(p.data[0])}</strong><small>${html(p.data[1])}</small><q>${html(p.data[2])}</q></div><span class="suspect-radio"></span></button>`).join('')}</div>
+       <div class="verdict-bar"><div><span class="small-label">FINAL VERDICT</span><p>${t('facts')}</p></div><button class="button button-primary" id="verdictButton">${t('verdict')} ↗</button></div>`;
+    $$('[data-clue]',scene).forEach(btn=>btn.addEventListener('click',()=>{
+      const i=+btn.dataset.clue;caseState.opened.add(i);btn.classList.add('examined');
+      $('#seenCount').textContent=num(caseState.opened.size);
+      const [name,details]=story.evidence[i];
+      const box=$('#clueDetail');box.classList.remove('hidden');box.innerHTML=`<span>${pad(i+1)} / ${t('evidenceTitle')}</span><h4>${html(name)}</h4><p>${html(details)}</p>`;
+    }));
+    $$('[data-suspect]',scene).forEach(btn=>btn.addEventListener('click',()=>{caseState.selected=+btn.dataset.suspect;$$('.suspect',scene).forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');}));
+    $('#verdictButton').addEventListener('click',()=>{
+      if(caseState.opened.size<2){showToast(t('needEvidence'));return;}
+      if(caseState.selected===null){showToast(t('pickSuspect'));return;}
+      const correct=caseState.suspects[caseState.selected].original===dailyCase.culprit;
+      resultView({id:'case',won:correct,score:correct?200:25,summary:t(correct?'right':'wrong'),details:story.resolution,emoji:correct?'✦':'⌕'});
+    });
+  }
+  function startCode(){
+    codeGuesses=[];
+    renderCode();
+  }
+  function renderCode(){
+    const secret=DATA.codes[edition % DATA.codes.length];
+    const rows=Array.from({length:6},(_,i)=>{
+      const entry=codeGuesses[i];
+      return `<div class="code-row">${Array.from({length:4},(_,j)=>`<span class="digit-box ${entry?(entry.result[j]===2?'exact':entry.result[j]===1?'partial':'none'):''}">${entry?entry.guess[j]:'·'}</span>`).join('')}${entry?`<span class="code-feedback">${entry.result.filter(v=>v===2).length} <i class="hint-dot exact"></i>&nbsp; ${entry.result.filter(v=>v===1).length} <i class="hint-dot partial"></i></span>`:''}</div>`;
+    }).join('');
+    $('#gameStage').innerHTML=`<div class="challenge-layout"><div class="challenge-instructions"><div class="challenge-icon">⌗</div><h2>${t('codeName')}</h2><p>${t('codeInfo')}</p><div class="legend-row"><span><i class="hint-dot exact"></i>${t('codeExact')}</span><span><i class="hint-dot partial"></i>${t('codePartial')}</span></div><div class="fact-card"><span>${t('attemptsLeft')}</span><b>${num(6-codeGuesses.length)}</b></div></div><div class="challenge-main"><div class="code-board">${rows}</div><form id="codeForm" class="code-form"><label for="codeInput" class="sr-only">${t('codeInput')}</label><input id="codeInput" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" maxlength="4" placeholder="0 0 0 0" aria-label="${t('codeInput')}" /><button class="button button-primary" type="submit">${t('tryGuess')} ↗</button></form></div></div>`;
+    $('#codeForm').addEventListener('submit',e=>{
+      e.preventDefault();const guess=$('#codeInput').value.replace(/[^0-9]/g,'');
+      if(guess.length!==4){showToast(t('invalidCode'));return;}
+      const secretArr=[...secret]; const markers=Array(4).fill(0);const used=Array(4).fill(false);
+      for(let j=0;j<4;j++)if(guess[j]===secret[j]){markers[j]=2;used[j]=true;}
+      for(let j=0;j<4;j++)if(markers[j]!==2){const k=secretArr.findIndex((s,p)=>!used[p]&&s===guess[j]);if(k>=0){markers[j]=1;used[k]=true;}}
+      codeGuesses.push({guess,result:markers});
+      if(guess===secret){resultView({id:'code',won:true,score:Math.max(45,120-(codeGuesses.length-1)*15),summary:t('codeWon'),details:`${t('secretWas')}: ${secret}`,emoji:'🔓'});}
+      else if(codeGuesses.length===6){resultView({id:'code',won:false,score:0,summary:t('codeLost'),details:`${t('secretWas')}: ${secret}`,emoji:'⌗'});}
+      else {renderCode();$('#codeInput').focus();}
+    });
+  }
+  function startMemory(){
+    memoryState={symbols:DATA.symbolSets[edition % DATA.symbolSets.length],right:0,index:0};
+    $('#gameStage').innerHTML=`<div class="intro-challenge"><div class="big-illustration">◉</div><span class="section-eyebrow">SEVEN SECONDS</span><h2>${t('memoryReady')}</h2><p>${t('memoryInstructions')}</p><button class="button button-primary" id="beginMemory">${t('showScene')} ↗</button></div>`;
+    $('#beginMemory').addEventListener('click',()=>{
+      let countdown=7;
+      $('#gameStage').innerHTML=`<div class="memory-reveal"><div class="memory-count"><span>${t('memorize')}</span><strong id="countDown">${num(countdown)}</strong></div><div class="memory-symbols">${memoryState.symbols.map(s=>`<div class="memory-symbol">${s}</div>`).join('')}</div><p class="helper-copy">${t('memoryInstructions')}</p></div>`;
+      timer=setInterval(()=>{countdown--; if($('#countDown'))$('#countDown').textContent=num(countdown);if(countdown<=0){clearGameTimer();renderMemoryQuestion();}},1000);
+    });
+  }
+  function renderMemoryQuestion(){
+    const seq=memoryState.symbols;
+    const idx=memoryState.index;
+    const pool=[...new Set(DATA.symbolSets.flat())].filter(x=>!seq.includes(x));
+    const absent=pool[(edition+3)%pool.length];
+    const questions=[{q:t('memoryThird'),correct:seq[2],options:shuffled([seq[2],seq[0],seq[4],seq[5]],edition+11)},
+      {q:t('memoryLast'),correct:seq[5],options:shuffled([seq[1],seq[3],seq[5],seq[2]],edition+23)},
+      {q:t('memoryAbsent'),correct:absent,options:shuffled([seq[0],seq[2],seq[4],absent],edition+37)}];
+    const q=questions[idx];
+    $('#gameStage').innerHTML=`<div class="quiz-stage"><div class="quiz-progress"><span>${t('memoryQuestion')} ${num(idx+1)} / 3</span><div>${[0,1,2].map(i=>`<i class="${i<=idx?'fill':''}"></i>`).join('')}</div></div><h2>${html(q.q)}</h2><div class="quiz-options">${q.options.map((s,i)=>`<button class="symbol-option" data-memory-option="${i}" aria-label="${s}">${s}</button>`).join('')}</div><p class="helper-copy">${t('memoryQuestion')} ${num(idx+1)} / 3</p></div>`;
+    $$('[data-memory-option]').forEach(btn=>btn.addEventListener('click',()=>{
+      if(q.options[+btn.dataset.memoryOption]===q.correct)memoryState.right++;
+      memoryState.index++;
+      if(memoryState.index===3){const n=memoryState.right;resultView({id:'memory',won:n>=2,score:Math.round(n/3*100),summary:t('memoryFinished'),details:`${t('yourScore')}: ${num(n)} / 3`,emoji:'◉'});}
+      else renderMemoryQuestion();
+    }));
+  }
+  function startTimeline(){
+    timelineState={order:shuffled([0,1,2,3],edition+155),attempts:0};
+    if(timelineState.order.every((id,pos)=>id===pos))timelineState.order=[2,0,3,1];
+    renderTimeline();
+  }
+  function renderTimeline(){
+    const steps=DATA.timelines[edition % DATA.timelines.length][lang];
+    $('#gameStage').innerHTML=`<div class="timeline-layout"><div class="challenge-instructions"><div class="challenge-icon">≋</div><h2>${t('timelineName')}</h2><p>${t('timelineInfo')}</p><span class="section-eyebrow">${t('attemptsLeft')}: ${num(2-timelineState.attempts)}</span></div><div class="timeline-main"><div class="timeline-list">${timelineState.order.map((n,i)=>`<div class="timeline-row"><span class="timeline-position">${num(i+1)}</span><span class="timeline-text">${html(steps[n])}</span><div class="move-controls"><button data-move="${i}:up" ${i===0?'disabled':''} aria-label="${html(lang==='ar'?'حرّك فوق':'Move up')}">↑</button><button data-move="${i}:down" ${i===3?'disabled':''} aria-label="${html(lang==='ar'?'حرّك تحت':'Move down')}">↓</button></div></div>`).join('')}</div><button id="timelineSubmit" class="button button-primary button-full">${t('submitOrder')} ↗</button></div></div>`;
+    $$('[data-move]').forEach(b=>b.addEventListener('click',()=>{const [p,d]=b.dataset.move.split(':');const i=Number(p),j=d==='up'?i-1:i+1;if(j<0||j>3)return;[timelineState.order[i],timelineState.order[j]]=[timelineState.order[j],timelineState.order[i]];renderTimeline();}));
+    $('#timelineSubmit').addEventListener('click',()=>{
+      const won=timelineState.order.every((n,i)=>n===i);
+      timelineState.attempts++;
+      if(won)resultView({id:'timeline',won:true,score:timelineState.attempts===1?80:50,summary:t('timelineWon'),emoji:'≋'});
+      else if(timelineState.attempts>=2)resultView({id:'timeline',won:false,score:0,summary:t('timelineLost'),details:`${t('correctOrder')}: ${steps.join(' ← ')}`,emoji:'≋'});
+      else {showToast(t('timelineTryAgain'));renderTimeline();}
+    });
+  }
+  async function shareResult(){
+    const icons={case:'🔎',code:'⌗',memory:'◉',timeline:'≋'};
+    const report=`✦ BLACK FILE | ${lang==='ar'?'الملف الأسود':'BLACK FILE'}\n${readableDate()}\n`+DATA.games.map(g=>`${icons[g.id]} ${t(g.name)}: ${outcome(g.id)?outcome(g.id).score+'/'+g.max:'—'}`).join('\n')+`\n✦ ${t('score')}: ${scoreToday()}/500\n${location.origin.startsWith('http')?location.origin+location.pathname:''}`;
+    try {
+      if(navigator.share){ await navigator.share({title:'BLACK FILE',text:report}); return; }
+      if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(report);showToast(t('shareCopied'));return;}
+      const el=document.createElement('textarea');el.value=report;document.body.appendChild(el);el.select();document.execCommand('copy');el.remove();showToast(t('shareCopied'));
+    }catch(err){if(err.name!=='AbortError')showToast(t('shareFailed'));}
+  }
+  function boot(){
+    translateStatic();paintProgress();paintArchive();paintStats();go('home');
+    // Delegate navigation: buttons also appear dynamically after completing a game.
+    document.addEventListener('click', e=>{const b=e.target.closest('[data-view]');if(b)go(b.dataset.view);});
+    $('#startCaseBtn').addEventListener('click',()=>launch('case'));
+    $('#allGamesBtn').addEventListener('click',()=>go('games'));
+    $('#backToGames').addEventListener('click',()=>go('games'));
+    document.addEventListener('click',e=>{if(e.target.closest('[data-open-premium],#premiumBtn'))showPremium();});
+    $('#closeModal').addEventListener('click',hidePremium);
+    $('#premiumConfirm').addEventListener('click',hidePremium);
+    $('#premiumModal').addEventListener('click',e=>{if(e.target.id==='premiumModal')hidePremium();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')hidePremium();});
+    document.addEventListener('click',e=>{const b=e.target.closest('[data-launch]');if(b)launch(b.dataset.launch);});
+    $('#shareBtn').addEventListener('click',shareResult);
+    $('#languageBtn').addEventListener('click',()=>{
+      lang=lang==='ar'?'en':'ar';saved.lang=lang;persist();translateStatic();paintProgress();paintArchive();paintStats();
+      if(currentView==='play'&&currentGame)launch(currentGame);
+    });
+    if('serviceWorker' in navigator && location.protocol.startsWith('http')){
+      navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
+    }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+})();
+
+  </script>
+</body>
+</html>
