@@ -1,0 +1,4 @@
+BLACK FILE - GitHub Control Connection Test
+Created: 2026-10-18
+Purpose: Verify publishing a new harmless text file from the BLACK FILE admin dashboard.
+This file does not modify the website, games, or Supabase database.
