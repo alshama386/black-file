@@ -228,7 +228,7 @@ async function enablePush(){
   if(permission!=='granted'){message(label,'ما تم السماح بالإشعارات. تقدر تغير الإذن من إعدادات الجهاز.');return;}
   const reg=swRegistration||await navigator.serviceWorker.ready;
   const subscription=await reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:base64URLToUint8Array(pub)});
-  const {data,error}=await client().functions.invoke('push-subscribe',{body:{subscription:subscription.toJSON()}});
+  const {data,error}=await client().functions.invoke('bright-handler',{body:{subscription:subscription.toJSON()}});
   if(error||data?.error)throw new Error(data?.error||error?.message||'Failed');
   message(label,'✅ تم ربط هذا الجهاز بإشعارات الملف الأسود.');
  }catch(e){message(label,'تعذر تفعيل Push: '+e.message);}
