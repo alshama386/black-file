@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="BLACK FILE gold BF folder monogram">
+<defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4d89d"/><stop offset=".51" stop-color="#cb9d5b"/><stop offset="1" stop-color="#927042"/></linearGradient></defs>
+<rect width="512" height="512" rx="106" fill="#11161f"/>
+<path d="M92 144V120q0-17 17-17h97l29 32h166q20 0 20 21v239q0 19-19 19H110q-18 0-18-19Z" fill="#171d26" stroke="url(#gold)" stroke-width="12"/>
+<path d="M115 169h280M116 350h280" stroke="#9a794a" stroke-width="6" opacity=".82"/>
+<text x="256" y="318" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="148" fill="url(#gold)" letter-spacing="-10">BF</text>
+<path d="M135 378h242" stroke="url(#gold)" stroke-width="8" stroke-linecap="round"/>
+<path d="M386 101l8 19 21 8-21 8-8 20-8-20-21-8 21-8z" fill="#e8bb79"/>
+</svg>
